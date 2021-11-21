@@ -1134,7 +1134,7 @@
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "parameters":{"basic.simultaneous_threshold_milliseconds":100,
-                "basic.to_delayed_action_delay_milliseconds":10},
+                "basic.to_delayed_action_delay_milliseconds":20},
             "from":{"simultaneous":[
                         {"key_code":"j"},
                         {"key_code":"k"},
@@ -1154,7 +1154,7 @@
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "parameters":{"basic.simultaneous_threshold_milliseconds":100,
-                "basic.to_delayed_action_delay_milliseconds":10},
+                "basic.to_delayed_action_delay_milliseconds":20},
             "from":{"simultaneous":[
                         {"key_code":"j"},
                         {"key_code":"k"},
@@ -1174,7 +1174,7 @@
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "parameters":{"basic.simultaneous_threshold_milliseconds":100,
-                "basic.to_delayed_action_delay_milliseconds":10},
+                "basic.to_delayed_action_delay_milliseconds":20},
             "from":{"simultaneous":[
                         {"key_code":"j"},
                         {"key_code":"k"},
@@ -1194,7 +1194,7 @@
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "parameters":{"basic.simultaneous_threshold_milliseconds":100,
-                "basic.to_delayed_action_delay_milliseconds":10},
+                "basic.to_delayed_action_delay_milliseconds":20},
             "from":{"simultaneous":[
                         {"key_code":"j"},
                         {"key_code":"k"},
@@ -1214,7 +1214,7 @@
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "parameters":{"basic.simultaneous_threshold_milliseconds":100,
-                "basic.to_delayed_action_delay_milliseconds":10},
+                "basic.to_delayed_action_delay_milliseconds":20},
             "from":{"simultaneous":[
                         {"key_code":"d"},
                         {"key_code":"f"},
@@ -1234,7 +1234,7 @@
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "parameters":{"basic.simultaneous_threshold_milliseconds":100,
-                "basic.to_delayed_action_delay_milliseconds":10},
+                "basic.to_delayed_action_delay_milliseconds":20},
             "from":{"simultaneous":[
                         {"key_code":"m"},
                         {"key_code":"comma"},
@@ -1254,7 +1254,7 @@
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "parameters":{"basic.simultaneous_threshold_milliseconds":100,
-                "basic.to_delayed_action_delay_milliseconds":10},
+                "basic.to_delayed_action_delay_milliseconds":20},
             "from":{"simultaneous":[
                         {"key_code":"m"},
                         {"key_code":"comma"},
@@ -1274,7 +1274,7 @@
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "parameters":{"basic.simultaneous_threshold_milliseconds":100,
-                "basic.to_delayed_action_delay_milliseconds":10},
+                "basic.to_delayed_action_delay_milliseconds":20},
             "from":{"simultaneous":[
                         {"key_code":"m"},
                         {"key_code":"comma"},
@@ -1531,7 +1531,7 @@
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "parameters":{"basic.simultaneous_threshold_milliseconds":100,
-                "basic.to_delayed_action_delay_milliseconds":10},
+                "basic.to_delayed_action_delay_milliseconds":20},
             "from":{"simultaneous":[
                         {"key_code":"j"},
                         {"key_code":"k"},
@@ -1550,7 +1550,7 @@
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "parameters":{"basic.simultaneous_threshold_milliseconds":100,
-                "basic.to_delayed_action_delay_milliseconds":10},
+                "basic.to_delayed_action_delay_milliseconds":20},
             "from":{"simultaneous":[
                         {"key_code":"j"},
                         {"key_code":"k"},
@@ -2901,7 +2901,7 @@
             "to_delayed_action":{"to_if_invoked":[
                     {"key_code":"lang1","repeat":false}
             ]},
-            "parameters":{"basic.to_delayed_action_delay_milliseconds":10}
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":20}
         },
         {"type":"basic",
             "from":{"simultaneous":[
@@ -3463,7 +3463,7 @@
             "to_delayed_action":{"to_if_invoked":[
                 {"key_code":"left_arrow","modifiers":["command"]},{"key_code":"down_arrow","modifiers":["command"]},{"key_code":"lang2"},{"key_code":"lang1"}
             ]},
-            "parameters":{"basic.to_delayed_action_delay_milliseconds":10}
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":20}
         },
         {"description":"あ, い, こ → ↲↓","type":"basic",
             "conditions":[
@@ -3477,7 +3477,7 @@
             "to_delayed_action":{"to_if_invoked":[
                 {"key_code":"f","modifiers":["control"]},{"key_code":"lang2"},{"key_code":"lang1"}
             ]},
-            "parameters":{"basic.to_delayed_action_delay_milliseconds":10}
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":20}
         },
         {"description":"あ, い, ほ → ──","type":"basic",
             "conditions":[
@@ -3491,7 +3491,7 @@
             "to_delayed_action":{"to_if_invoked":[
                         {"key_code":"2","modifiers":["option"]},{"key_code":"5","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"2","modifiers":["option"]},{"key_code":"2","modifiers":["option"]},{"key_code":"5","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"2","modifiers":["option"]},{"key_code":"lang1"}
             ]},
-            "parameters":{"basic.to_delayed_action_delay_milliseconds":10}
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":20}
         },
         {"description":"あ, い, そ → 《》","type":"basic",
             "conditions":[
@@ -3505,7 +3505,7 @@
             "to_delayed_action":{"to_if_invoked":[
                         {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"a","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"b","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"lang2"},{"key_code":"lang1"}
             ]},
-            "parameters":{"basic.to_delayed_action_delay_milliseconds":10}
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":20}
         },
         {"description":"と, か, く → ↲End▼","type":"basic",
             "conditions":[
@@ -3519,7 +3519,7 @@
             "to_delayed_action":{"to_if_invoked":[
                 {"key_code":"e","modifiers":["control"]},{"key_code":"lang1"}
             ]},
-            "parameters":{"basic.to_delayed_action_delay_milliseconds":10}
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":20}
         },
         {"description":"な, ん, 小 → x   x   x","type":"basic",
             "conditions":[
@@ -3533,7 +3533,7 @@
             "to_delayed_action":{"to_if_invoked":[
                         {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"d","modifiers":["option"]},{"key_code":"7","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"d","modifiers":["option"]},{"key_code":"7","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"d","modifiers":["option"]},{"key_code":"7","modifiers":["option"]},{"key_code":"lang1"},{"key_code":"return_or_enter"}
             ]},
-            "parameters":{"basic.to_delayed_action_delay_milliseconds":10}
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":20}
         },
         {"description":"な, ん, 左 → ○","type":"basic",
             "conditions":[
@@ -3547,7 +3547,7 @@
             "to_delayed_action":{"to_if_invoked":[
                         {"key_code":"2","modifiers":["option"]},{"key_code":"5","modifiers":["option"]},{"key_code":"c","modifiers":["option"]},{"key_code":"b","modifiers":["option"]},{"key_code":"lang1"}
             ]},
-            "parameters":{"basic.to_delayed_action_delay_milliseconds":10}
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":20}
         },
         {"description":"な, ん, そ → ｜《》","type":"basic",
             "conditions":[
@@ -3563,7 +3563,7 @@
             "to_delayed_action":{"to_if_invoked":[
                         {"key_code":"f","modifiers":["option"]},{"key_code":"f","modifiers":["option"]},{"key_code":"5","modifiers":["option"]},{"key_code":"c","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"a","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"b","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"b","modifiers":["control"]},{"key_code":"v","modifiers":["command"]},{"key_code":"f","modifiers":["control"]},{"key_code":"spacebar"},{"key_code":"b","modifiers":["shift","control"]},{"key_code":"x","modifiers":["command"]},{"key_code":"lang2"},{"key_code":"lang1"}
             ]},
-            "parameters":{"basic.to_delayed_action_delay_milliseconds":10}
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":20}
         },
 
 
@@ -3750,7 +3750,7 @@
             "to_delayed_action":{"to_if_invoked":[
                 {"key_code":"lang1"},{"key_code":"e","modifiers":["control"]},{"key_code":"return_or_enter"},{"key_code":"close_bracket"},{"key_code":"non_us_pound"},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"]}
             ]},
-            "parameters":{"basic.to_delayed_action_delay_milliseconds":10}
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":20}
         },{"type":"basic",
             "conditions":[
                         {"type":"variable_if","name":"EM1L","value":1},
@@ -3763,7 +3763,7 @@
             "to_delayed_action":{"to_if_invoked":[
                 {"key_code":"lang1"},{"key_code":"e","modifiers":["control"]},{"key_code":"return_or_enter"},{"key_code":"open_bracket"},{"key_code":"close_bracket"},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"]}
             ]},
-            "parameters":{"basic.to_delayed_action_delay_milliseconds":10}
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":20}
                     },
 
 
