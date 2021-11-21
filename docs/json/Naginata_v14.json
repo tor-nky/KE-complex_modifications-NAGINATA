@@ -2137,7 +2137,7 @@
                         {"key_code":"l"}
             ]},
             "to":[
-                        {"key_code":"q"},{"key_code":"w"},{"key_code":"a","repeat":false}
+                        {"key_code":"k"},{"key_code":"u"},{"key_code":"x"},{"key_code":"w"},{"key_code":"a","repeat":false}
             ]
         },
         {"description":"(シンクロ) 左濁, く, あ → ぐぁ","type":"basic",
