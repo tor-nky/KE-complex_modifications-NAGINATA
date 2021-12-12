@@ -438,7 +438,6 @@
         }
     ]},
 
-
     {"description":"薙刀式配列v14仮（集大成版）20211029","manipulators":[
         {"description":"(シンクロ) あ, い, し → 保","type":"basic",
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
