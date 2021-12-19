@@ -15,7 +15,6 @@
             ]
         },
 
-
         {"description":"(シンクロ) Sp, 小","type":"basic",
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
@@ -440,11 +439,12 @@
 
 
     {"description":"薙刀式配列v14（集大成版）","manipulators":[
-        {"description":"(シンクロ) あ, い, 小 → 新","type":"basic",
+        {"description":"(U.S.使用)(シンクロ) あ, い, 小 → 新","type":"basic",
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
+                "basic.to_delayed_action_delay_milliseconds":30},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"k"},
@@ -452,8 +452,11 @@
                 ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
             },
             "to":[{"set_variable":{"name":"EM1L","value":1}},
-                {"key_code":"lang2"},{"key_code":"left_arrow","modifiers":["command"]},{"key_code":"down_arrow","modifiers":["command"]},{"key_code":"lang1"}
-            ]
+                {"select_input_source":{"input_source_id":"com.apple.keylayout.US"}}
+            ],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"left_arrow","modifiers":["command"]},{"key_code":"down_arrow","modifiers":["command"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
+            ]}
         },
         {"description":"(シンクロ) あ, い, ろ → ……","type":"basic",
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
@@ -469,6 +472,160 @@
             "to":[{"set_variable":{"name":"EM1L","value":1}},
                 {"key_code":"semicolon","modifiers":["option"]},{"key_code":"semicolon","modifiers":["option"]},{"key_code":"return_or_enter","repeat":false}
             ]
+        },
+        {"description":"(UNICODE使用)(シンクロ) あ, い, ほ → ──","type":"basic",
+            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
+                "basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"simultaneous":[
+                    {"key_code":"j"},
+                    {"key_code":"k"},
+                    {"key_code":"z"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM1L","value":1}},
+                {"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"2","modifiers":["option"]},{"key_code":"5","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"2","modifiers":["option"]},{"key_code":"2","modifiers":["option"]},{"key_code":"5","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"2","modifiers":["option"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
+            ]}
+        },
+        {"description":"(日本語IM時)(JIS/US)(シンクロ) あ, い, き → 『』","type":"basic",
+            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
+                "basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"simultaneous":[
+                    {"key_code":"j"},
+                    {"key_code":"k"},
+                    {"key_code":"w"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM1L","value":1}},
+                {"key_code":"close_bracket","modifiers":["shift"]},{"key_code":"non_us_pound","modifiers":["shift"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
+            ]
+        },
+        {"type":"basic",
+            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
+                "basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"simultaneous":[
+                    {"key_code":"j"},
+                    {"key_code":"k"},
+                    {"key_code":"w"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM1L","value":1}},
+                {"key_code":"open_bracket","modifiers":["shift"]},{"key_code":"close_bracket","modifiers":["shift"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
+            ]
+        },
+        {"description":"(UNICODE使用)(シンクロ) あ, い, き → 『』","type":"basic",
+            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
+                "basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"simultaneous":[
+                    {"key_code":"j"},
+                    {"key_code":"k"},
+                    {"key_code":"w"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM1L","value":1}},
+                {"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"e","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"f","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
+            ]}
+        },
+        {"description":"(JIS/US)(シンクロ) あ, い, け → （）","type":"basic",
+            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
+            "from":{"simultaneous":[
+                    {"key_code":"j"},
+                    {"key_code":"k"},
+                    {"key_code":"s"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM1L","value":1}},
+                {"key_code":"8","modifiers":["shift"]},{"key_code":"9","modifiers":["shift"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
+            ]
+        },
+        {"type":"basic",
+            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
+            "from":{"simultaneous":[
+                    {"key_code":"j"},
+                    {"key_code":"k"},
+                    {"key_code":"s"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM1L","value":1}},
+                {"key_code":"9","modifiers":["shift"]},{"key_code":"0","modifiers":["shift"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
+            ]
+        },
+        {"description":"(日本語IM時)(JIS/US)(シンクロ) あ, い, ひ → 【】","type":"basic",
+            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
+                "basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"simultaneous":[
+                    {"key_code":"j"},
+                    {"key_code":"k"},
+                    {"key_code":"x"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM1L","value":1}},
+                {"key_code":"8","modifiers":["option"]},{"key_code":"9","modifiers":["option"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
+            ]
+        },
+        {"type":"basic",
+            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
+                "basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"simultaneous":[
+                    {"key_code":"j"},
+                    {"key_code":"k"},
+                    {"key_code":"x"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM1L","value":1}},
+                {"key_code":"9","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
+            ]
+        },
+        {"description":"(UNICODE使用)(シンクロ) あ, い, ひ → 【】","type":"basic",
+            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
+                "basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"simultaneous":[
+                    {"key_code":"j"},
+                    {"key_code":"k"},
+                    {"key_code":"x"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM1L","value":1}},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
+            ]}
         },
         {"description":"(シンクロ) あ, い, と → ？","type":"basic",
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
@@ -515,7 +672,23 @@
                 {"key_code":"s","modifiers":["command"],"repeat":false}
             ]
         },
-        {"description":"(シンクロ) あ, い, こ → 確定↓","type":"basic",
+        {"description":"(JIS/US)(シンクロ) あ, い, か → 「」","type":"basic",
+            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
+            "from":{"simultaneous":[
+                    {"key_code":"j"},
+                    {"key_code":"k"},
+                    {"key_code":"f"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM1L","value":1}},
+                {"key_code":"close_bracket"},{"key_code":"non_us_pound"},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
+            ]
+        },
+        {"type":"basic",
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
@@ -523,12 +696,29 @@
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"k"},
-                    {"key_code":"v"}
+                    {"key_code":"f"}
                 ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
             },
             "to":[{"set_variable":{"name":"EM1L","value":1}},
-                {"key_code":"return_or_enter"},{"key_code":"f","modifiers":["control"]}
+                {"key_code":"open_bracket"},{"key_code":"close_bracket"},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
             ]
+        },
+        {"description":"(U.S.使用)(シンクロ) あ, い, こ → 確定↓","type":"basic",
+            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
+                "basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"simultaneous":[
+                    {"key_code":"j"},
+                    {"key_code":"k"},
+                    {"key_code":"v"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM1L","value":1}},{"select_input_source":{"input_source_id":"com.apple.keylayout.US"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"f","modifiers":["control"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
+            ]}
         },
         {"description":"(シンクロ) あ, い, 左 → ・未確定","type":"basic",
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
@@ -545,6 +735,58 @@
                 {"key_code":"slash","repeat":false}
             ]
         },
+        {"description":"(U.S.使用)(JIS/US)(シンクロ) あ, い, (っ) → ↲「」","type":"basic",
+            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
+                "basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"simultaneous":[
+                    {"key_code":"j"},
+                    {"key_code":"k"},
+                    {"key_code":"g"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM1L","value":1}},{"select_input_source":{"input_source_id":"com.apple.keylayout.US"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"lang1"},{"key_code":"e","modifiers":["control"]},{"key_code":"return_or_enter"},{"key_code":"close_bracket"},{"key_code":"non_us_pound"},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
+            ]}
+        },
+        {"type":"basic",
+            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
+                "basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"simultaneous":[
+                    {"key_code":"j"},
+                    {"key_code":"k"},
+                    {"key_code":"g"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM1L","value":1}},{"select_input_source":{"input_source_id":"com.apple.keylayout.US"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"lang1"},{"key_code":"e","modifiers":["control"]},{"key_code":"return_or_enter"},{"key_code":"open_bracket"},{"key_code":"close_bracket"},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
+            ]}
+        },
+        {"description":"(U.S.使用)(シンクロ) あ, い, そ → ↲□","type":"basic",
+            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
+                "basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"simultaneous":[
+                    {"key_code":"j"},
+                    {"key_code":"k"},
+                    {"key_code":"b"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM1L","value":1}},{"select_input_source":{"input_source_id":"com.apple.keylayout.US"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"lang1"},{"key_code":"e","modifiers":["control"]},{"key_code":"return_or_enter"},{"key_code":"spacebar"}
+            ]}
+        },
         {"description":"(シンクロ) と, か, 右 → Home","type":"basic",
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
@@ -559,6 +801,23 @@
             "to":[{"set_variable":{"name":"EM1R","value":1}},
                 {"key_code":"a","modifiers":["control"],"repeat":false}
             ]
+        },
+        {"description":"(U.S.使用)(シンクロ) と, か, く → 確定End","type":"basic",
+            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
+                "basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"simultaneous":[
+                    {"key_code":"d"},
+                    {"key_code":"f"},
+                    {"key_code":"h"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1R","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM1R","value":1}},{"select_input_source":{"input_source_id":"com.apple.keylayout.US"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"e","modifiers":["control"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
+            ]}
         },
         {"description":"(シンクロ) と, か, た → End","type":"basic",
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
@@ -770,6 +1029,175 @@
                 {"key_code":"x","modifiers":["command"]},{"key_code":"delete_or_backspace"},{"key_code":"delete_forward"},{"key_code":"v","modifiers":["command"],"repeat":false}
             ]
         },
+        {"description":"(UNICODE使用)(シンクロ) な, ん, ろ → 《》","type":"basic",
+            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
+                "basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"simultaneous":[
+                    {"key_code":"m"},
+                    {"key_code":"comma"},
+                    {"key_code":"a"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM2L","value":1}},
+                {"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"a","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"b","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
+            ]}
+        },
+        {"description":"(UNICODE使用)(シンクロ) な, ん, ほ → ｜《》","type":"basic",
+            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
+                "basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"simultaneous":[
+                    {"key_code":"m"},
+                    {"key_code":"comma"},
+                    {"key_code":"z"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM2L","value":1}},
+                {"key_code":"x","modifiers":["command"]},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"f","modifiers":["option"]},{"key_code":"f","modifiers":["option"]},{"key_code":"5","modifiers":["option"]},{"key_code":"c","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"a","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"b","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"b","modifiers":["control"]},{"key_code":"v","modifiers":["command"]},{"key_code":"f","modifiers":["control"]},{"key_code":"spacebar"},{"key_code":"b","modifiers":["shift","control"]},{"key_code":"x","modifiers":["command"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
+            ]}
+        },
+        {"description":"(日本語IM時)(JIS/US)(シンクロ) な, ん, き → +『』","type":"basic",
+            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
+            "from":{"simultaneous":[
+                    {"key_code":"m"},
+                    {"key_code":"comma"},
+                    {"key_code":"w"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM2L","value":1}},
+                {"key_code":"x","modifiers":["command"]},{"key_code":"close_bracket","modifiers":["shift"]},{"key_code":"v","modifiers":["command"]},{"key_code":"non_us_pound","modifiers":["shift"]},{"key_code":"return_or_enter"},{"key_code":"spacebar"},{"key_code":"b","modifiers":["shift","control"]},{"key_code":"x","modifiers":["command"],"repeat":false}
+            ]
+        },
+        {"type":"basic",
+            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
+            "from":{"simultaneous":[
+                    {"key_code":"m"},
+                    {"key_code":"comma"},
+                    {"key_code":"w"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM2L","value":1}},
+                {"key_code":"x","modifiers":["command"]},{"key_code":"open_bracket","modifiers":["shift"]},{"key_code":"v","modifiers":["command"]},{"key_code":"close_bracket","modifiers":["shift"]},{"key_code":"return_or_enter"},{"key_code":"spacebar"},{"key_code":"b","modifiers":["shift","control"]},{"key_code":"x","modifiers":["command"],"repeat":false}
+            ]
+        },
+        {"description":"(UNICODE使用)(シンクロ) な, ん, き → +『』","type":"basic",
+            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
+                "basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"simultaneous":[
+                    {"key_code":"m"},
+                    {"key_code":"comma"},
+                    {"key_code":"w"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM2L","value":1}},
+                {"key_code":"x","modifiers":["command"]},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"e","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"f","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"v","modifiers":["command"]},{"key_code":"f","modifiers":["control"]},{"key_code":"spacebar"},{"key_code":"b","modifiers":["shift","control"]},{"key_code":"x","modifiers":["command"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
+            ]}
+        },
+        {"description":"(JIS/US)(シンクロ) な, ん, け → +（）","type":"basic",
+            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
+            "from":{"simultaneous":[
+                    {"key_code":"m"},
+                    {"key_code":"comma"},
+                    {"key_code":"s"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM2L","value":1}},
+                {"key_code":"x","modifiers":["command"]},{"key_code":"8","modifiers":["shift"]},{"key_code":"v","modifiers":["command"]},{"key_code":"9","modifiers":["shift"]},{"key_code":"return_or_enter"},{"key_code":"spacebar"},{"key_code":"b","modifiers":["shift","control"]},{"key_code":"x","modifiers":["command"],"repeat":false}
+            ]
+        },
+        {"type":"basic",
+            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
+            "from":{"simultaneous":[
+                    {"key_code":"m"},
+                    {"key_code":"comma"},
+                    {"key_code":"s"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM2L","value":1}},
+                {"key_code":"x","modifiers":["command"]},{"key_code":"9","modifiers":["shift"]},{"key_code":"v","modifiers":["command"]},{"key_code":"0","modifiers":["shift"]},{"key_code":"return_or_enter"},{"key_code":"spacebar"},{"key_code":"b","modifiers":["shift","control"]},{"key_code":"x","modifiers":["command"],"repeat":false}
+            ]
+        },
+        {"description":"(日本語IM時)(JIS/US)(シンクロ) な, ん, ひ → +【】","type":"basic",
+            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
+            "from":{"simultaneous":[
+                    {"key_code":"m"},
+                    {"key_code":"comma"},
+                    {"key_code":"x"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM2L","value":1}},
+                {"key_code":"x","modifiers":["command"]},{"key_code":"8","modifiers":["option"]},{"key_code":"v","modifiers":["command"]},{"key_code":"9","modifiers":["option"]},{"key_code":"return_or_enter"},{"key_code":"spacebar"},{"key_code":"b","modifiers":["shift","control"]},{"key_code":"x","modifiers":["command"],"repeat":false}
+            ]
+        },
+        {"type":"basic",
+            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
+            "from":{"simultaneous":[
+                    {"key_code":"m"},
+                    {"key_code":"comma"},
+                    {"key_code":"x"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM2L","value":1}},
+                {"key_code":"x","modifiers":["command"]},{"key_code":"9","modifiers":["option"]},{"key_code":"v","modifiers":["command"]},{"key_code":"0","modifiers":["option"]},{"key_code":"return_or_enter"},{"key_code":"spacebar"},{"key_code":"b","modifiers":["shift","control"]},{"key_code":"x","modifiers":["command"],"repeat":false}
+            ]
+        },
+        {"description":"(UNICODE使用)(シンクロ) な, ん, ひ → +【】","type":"basic",
+            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
+                "basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"simultaneous":[
+                    {"key_code":"m"},
+                    {"key_code":"comma"},
+                    {"key_code":"x"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM2L","value":1}},
+                {"key_code":"x","modifiers":["command"]},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"v","modifiers":["command"]},{"key_code":"f","modifiers":["control"]},{"key_code":"spacebar"},{"key_code":"b","modifiers":["shift","control"]},{"key_code":"x","modifiers":["command"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
+            ]}
+        },
         {"description":"(シンクロ) な, ん, て → 行頭□□□挿入","type":"basic",
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
@@ -830,6 +1258,37 @@
                 {"key_code":"a","modifiers":["control"]},{"key_code":"return_or_enter"},{"key_code":"spacebar"},{"key_code":"e","modifiers":["control"],"repeat":false}
             ]
         },
+        {"description":"(JIS/US)(シンクロ) な, ん, か → +「」","type":"basic",
+            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+                "parameters":{"basic.simultaneous_threshold_milliseconds":80},
+            "from":{"simultaneous":[
+                    {"key_code":"m"},
+                    {"key_code":"comma"},
+                    {"key_code":"f"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM2L","value":1}},
+                {"key_code":"x","modifiers":["command"]},{"key_code":"close_bracket"},{"key_code":"v","modifiers":["command"]},{"key_code":"non_us_pound"},{"key_code":"return_or_enter"},{"key_code":"spacebar"},{"key_code":"b","modifiers":["shift","control"]},{"key_code":"x","modifiers":["command"],"repeat":false}
+            ]
+        },
+        {"type":"basic",
+            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+                "parameters":{"basic.simultaneous_threshold_milliseconds":80},
+            "from":{"simultaneous":[
+                    {"key_code":"m"},
+                    {"key_code":"comma"},
+                    {"key_code":"f"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM2L","value":1}},
+                {"key_code":"x","modifiers":["command"]},{"key_code":"open_bracket"},{"key_code":"v","modifiers":["command"]},{"key_code":"close_bracket"},{"key_code":"return_or_enter"},{"key_code":"spacebar"},{"key_code":"b","modifiers":["shift","control"]},{"key_code":"x","modifiers":["command"],"repeat":false}
+            ]
+        },
         {"description":"(シンクロ) な, ん, こ → 行頭□戻し","type":"basic",
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
@@ -845,6 +1304,24 @@
                 {"key_code":"a","modifiers":["control"]},{"key_code":"delete_or_backspace"},{"key_code":"delete_forward"},{"key_code":"e","modifiers":["control"],"repeat":false}
             ]
         },
+        {"description":"(UNICODE使用)(シンクロ) な, ん, 左 → ○","type":"basic",
+            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
+                "basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"simultaneous":[
+                    {"key_code":"m"},
+                    {"key_code":"comma"},
+                    {"key_code":"t"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM2L","value":1}},
+                {"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"2","modifiers":["option"]},{"key_code":"5","modifiers":["option"]},{"key_code":"c","modifiers":["option"]},{"key_code":"b","modifiers":["option"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
+            ]}
+        },
         {"description":"(シンクロ) な, ん, (っ) → ／","type":"basic",
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
@@ -859,6 +1336,24 @@
             "to":[{"set_variable":{"name":"EM2L","value":1}},
                 {"key_code":"slash","modifiers":["option"]},{"key_code":"return_or_enter","repeat":false}
             ]
+        },
+        {"description":"(UNICODE使用)(シンクロ) な, ん, そ → x   x   x","type":"basic",
+            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
+                "basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"simultaneous":[
+                    {"key_code":"m"},
+                    {"key_code":"comma"},
+                    {"key_code":"b"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"EM2L","value":1}},
+                {"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"d","modifiers":["option"]},{"key_code":"7","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"d","modifiers":["option"]},{"key_code":"7","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"d","modifiers":["option"]},{"key_code":"7","modifiers":["option"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"},{"key_code":"return_or_enter"}
+            ]}
         },
         {"description":"(シンクロ) は, こ, 右 → +Home","type":"basic",
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
@@ -1085,404 +1580,6 @@
                 {"key_code":"f6","repeat":false}
             ]
         },
-
-
-        {"description":"(シンクロ) あ, い, け → （）","type":"basic",
-            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
-                {"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
-            "from":{"simultaneous":[
-                    {"key_code":"j"},
-                    {"key_code":"k"},
-                    {"key_code":"s"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"EM1L","value":1}},
-                {"key_code":"8","modifiers":["shift"]},{"key_code":"9","modifiers":["shift"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
-            ]
-        },
-        {"type":"basic",
-            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
-            "from":{"simultaneous":[
-                    {"key_code":"j"},
-                    {"key_code":"k"},
-                    {"key_code":"s"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"EM1L","value":1}},
-                {"key_code":"9","modifiers":["shift"]},{"key_code":"0","modifiers":["shift"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
-            ]
-        },
-        {"description":"(シンクロ) あ, い, か → 「」","type":"basic",
-            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
-                {"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
-            "from":{"simultaneous":[
-                    {"key_code":"j"},
-                    {"key_code":"k"},
-                    {"key_code":"f"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"EM1L","value":1}},
-                {"key_code":"close_bracket"},{"key_code":"non_us_pound"},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
-            ]
-        },
-        {"type":"basic",
-            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
-            "from":{"simultaneous":[
-                    {"key_code":"j"},
-                    {"key_code":"k"},
-                    {"key_code":"f"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"EM1L","value":1}},
-                {"key_code":"open_bracket"},{"key_code":"close_bracket"},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
-            ]
-        },
-        {"description":"(シンクロ) あ, い, (っ) → ↲「」","type":"basic",
-            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
-                {"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
-            "from":{"simultaneous":[
-                    {"key_code":"j"},
-                    {"key_code":"k"},
-                    {"key_code":"g"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"EM1L","value":1}},
-                {"key_code":"return_or_enter"},{"key_code":"e","modifiers":["control"]},{"key_code":"return_or_enter"},{"key_code":"close_bracket"},{"key_code":"non_us_pound"},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
-            ]
-        },
-        {"type":"basic",
-            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
-            "from":{"simultaneous":[
-                    {"key_code":"j"},
-                    {"key_code":"k"},
-                    {"key_code":"g"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"EM1L","value":1}},
-                {"key_code":"return_or_enter"},{"key_code":"e","modifiers":["control"]},{"key_code":"return_or_enter"},{"key_code":"open_bracket"},{"key_code":"close_bracket"},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
-            ]
-        },
-        {"description":"(シンクロ) あ, い, そ → ↲□","type":"basic",
-            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
-            "from":{"simultaneous":[
-                    {"key_code":"j"},
-                    {"key_code":"k"},
-                    {"key_code":"b"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"EM1L","value":1}},
-                {"key_code":"return_or_enter"},{"key_code":"e","modifiers":["control"]},{"key_code":"return_or_enter"},{"key_code":"spacebar","repeat":false}
-            ]
-        },
-        {"description":"(シンクロ) と, か, く → 確定End","type":"basic",
-            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
-            "from":{"simultaneous":[
-                    {"key_code":"d"},
-                    {"key_code":"f"},
-                    {"key_code":"h"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1R","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"EM1R","value":1}},
-                {"key_code":"return_or_enter"},{"key_code":"e","modifiers":["control"],"repeat":false}
-            ]
-        },
-
-
-        {"description":"(日本語IM)(シンクロ) あ, い, き → 『』","type":"basic",
-            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
-                {"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":20},
-            "from":{"simultaneous":[
-                    {"key_code":"j"},
-                    {"key_code":"k"},
-                    {"key_code":"w"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"EM1L","value":1}},
-                {"key_code":"close_bracket","modifiers":["shift"]},{"key_code":"non_us_pound","modifiers":["shift"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
-            ]
-        },
-        {"type":"basic",
-            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":20},
-            "from":{"simultaneous":[
-                    {"key_code":"j"},
-                    {"key_code":"k"},
-                    {"key_code":"w"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"EM1L","value":1}},
-                {"key_code":"open_bracket","modifiers":["shift"]},{"key_code":"close_bracket","modifiers":["shift"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
-            ]
-        },
-        {"description":"(日本語IM)(シンクロ) あ, い, ひ → 【】","type":"basic",
-            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
-                {"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":20},
-            "from":{"simultaneous":[
-                    {"key_code":"j"},
-                    {"key_code":"k"},
-                    {"key_code":"x"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"EM1L","value":1}},
-                {"key_code":"8","modifiers":["option"]},{"key_code":"9","modifiers":["option"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
-            ]
-        },
-        {"type":"basic",
-            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":20},
-            "from":{"simultaneous":[
-                    {"key_code":"j"},
-                    {"key_code":"k"},
-                    {"key_code":"x"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"EM1L","value":1}},
-                {"key_code":"9","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
-            ]
-        },
-
-
-        {"description":"(シンクロ) あ, い, ほ → ──","type":"basic",
-            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":20},
-            "from":{"simultaneous":[
-                    {"key_code":"j"},
-                    {"key_code":"k"},
-                    {"key_code":"z"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"EM1L","value":1}},
-                {"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
-            "to_delayed_action":{"to_if_invoked":[
-                {"key_code":"2","modifiers":["option"]},{"key_code":"5","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"2","modifiers":["option"]},{"key_code":"2","modifiers":["option"]},{"key_code":"5","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"2","modifiers":["option"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
-            ]}
-        },
-        {"description":"(シンクロ) あ, い, き → 『』","type":"basic",
-            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":20},
-            "from":{"simultaneous":[
-                    {"key_code":"j"},
-                    {"key_code":"k"},
-                    {"key_code":"w"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"EM1L","value":1}},
-                {"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
-            "to_delayed_action":{"to_if_invoked":[
-                {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"e","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"f","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
-            ]}
-        },
-        {"description":"(シンクロ) あ, い, ひ → 【】","type":"basic",
-            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":20},
-            "from":{"simultaneous":[
-                    {"key_code":"j"},
-                    {"key_code":"k"},
-                    {"key_code":"x"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"EM1L","value":1}},
-                {"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
-            "to_delayed_action":{"to_if_invoked":[
-                {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
-            ]}
-        },
-        {"description":"(シンクロ) な, ん, ろ → 《》","type":"basic",
-            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":20},
-            "from":{"simultaneous":[
-                    {"key_code":"m"},
-                    {"key_code":"comma"},
-                    {"key_code":"a"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"EM2L","value":1}},
-                {"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
-            "to_delayed_action":{"to_if_invoked":[
-                {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"a","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"b","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
-            ]}
-        },
-        {"description":"(シンクロ) な, ん, ほ → ｜《》","type":"basic",
-            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":20},
-            "from":{"simultaneous":[
-                    {"key_code":"m"},
-                    {"key_code":"comma"},
-                    {"key_code":"z"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"EM2L","value":1}},
-                {"key_code":"x","modifiers":["command"]},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
-            "to_delayed_action":{"to_if_invoked":[
-                {"key_code":"f","modifiers":["option"]},{"key_code":"f","modifiers":["option"]},{"key_code":"5","modifiers":["option"]},{"key_code":"c","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"a","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"b","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"b","modifiers":["control"]},{"key_code":"v","modifiers":["command"]},{"key_code":"f","modifiers":["control"]},{"key_code":"spacebar"},{"key_code":"b","modifiers":["shift","control"]},{"key_code":"x","modifiers":["command"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
-            ]}
-        },
-        {"description":"(シンクロ) な, ん, き → +『』","type":"basic",
-            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":20},
-            "from":{"simultaneous":[
-                    {"key_code":"m"},
-                    {"key_code":"comma"},
-                    {"key_code":"w"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"EM2L","value":1}},
-                {"key_code":"x","modifiers":["command"]},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
-            "to_delayed_action":{"to_if_invoked":[
-                {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"e","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"f","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"v","modifiers":["command"]},{"key_code":"f","modifiers":["control"]},{"key_code":"spacebar"},{"key_code":"b","modifiers":["shift","control"]},{"key_code":"x","modifiers":["command"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
-            ]}
-        },
-        {"description":"(シンクロ) な, ん, け → +（）","type":"basic",
-            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":20},
-            "from":{"simultaneous":[
-                    {"key_code":"m"},
-                    {"key_code":"comma"},
-                    {"key_code":"s"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"EM2L","value":1}},
-                {"key_code":"x","modifiers":["command"]},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
-            "to_delayed_action":{"to_if_invoked":[
-                {"key_code":"f","modifiers":["option"]},{"key_code":"f","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"8","modifiers":["option"]},{"key_code":"f","modifiers":["option"]},{"key_code":"f","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"9","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"v","modifiers":["command"]},{"key_code":"f","modifiers":["control"]},{"key_code":"spacebar"},{"key_code":"b","modifiers":["shift","control"]},{"key_code":"x","modifiers":["command"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
-            ]}
-        },
-        {"description":"(シンクロ) な, ん, ひ → +【】","type":"basic",
-            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":20},
-            "from":{"simultaneous":[
-                    {"key_code":"m"},
-                    {"key_code":"comma"},
-                    {"key_code":"x"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"EM2L","value":1}},
-                {"key_code":"x","modifiers":["command"]},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
-            "to_delayed_action":{"to_if_invoked":[
-                {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"v","modifiers":["command"]},{"key_code":"f","modifiers":["control"]},{"key_code":"spacebar"},{"key_code":"b","modifiers":["shift","control"]},{"key_code":"x","modifiers":["command"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
-            ]}
-        },
-        {"description":"(シンクロ) な, ん, か → +「」","type":"basic",
-            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":20},
-            "from":{"simultaneous":[
-                    {"key_code":"m"},
-                    {"key_code":"comma"},
-                    {"key_code":"f"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"EM2L","value":1}},
-                {"key_code":"x","modifiers":["command"]},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
-            "to_delayed_action":{"to_if_invoked":[
-                {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"c","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"d","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"v","modifiers":["command"]},{"key_code":"f","modifiers":["control"]},{"key_code":"spacebar"},{"key_code":"b","modifiers":["shift","control"]},{"key_code":"x","modifiers":["command"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
-            ]}
-        },
-        {"description":"(シンクロ) な, ん, 左 → ○","type":"basic",
-            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":20},
-            "from":{"simultaneous":[
-                    {"key_code":"m"},
-                    {"key_code":"comma"},
-                    {"key_code":"t"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"EM2L","value":1}},
-                {"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
-            "to_delayed_action":{"to_if_invoked":[
-                {"key_code":"2","modifiers":["option"]},{"key_code":"5","modifiers":["option"]},{"key_code":"c","modifiers":["option"]},{"key_code":"b","modifiers":["option"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
-            ]}
-        },
-        {"description":"(シンクロ) な, ん, そ → x   x   x","type":"basic",
-            "conditions":[{"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":20},
-            "from":{"simultaneous":[
-                    {"key_code":"m"},
-                    {"key_code":"comma"},
-                    {"key_code":"b"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"EM2L","value":1}},
-                {"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
-            "to_delayed_action":{"to_if_invoked":[
-                {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"d","modifiers":["option"]},{"key_code":"7","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"d","modifiers":["option"]},{"key_code":"7","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"d","modifiers":["option"]},{"key_code":"7","modifiers":["option"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"},{"key_code":"return_or_enter"}
-            ]}
-        },
-
 
         {"description":"(シンクロ) 右濁, し, や → じゃ","type":"basic",
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
@@ -2280,7 +2377,6 @@
             ]
         },
 
-
         {"description":"[右濁] (シンクロ) し, や → じゃ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
@@ -2930,7 +3026,6 @@
             ]
         },
 
-
         {"description":"(シンクロ) 左濁, さ → ざ","type":"basic",
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
@@ -3548,7 +3643,6 @@
             ]
         },
 
-
         {"description":"(シンクロ) 小, や → (ゃ)","type":"basic",
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
@@ -3614,47 +3708,6 @@
                 {"key_code":"x"},{"key_code":"i","repeat":false}
             ]
         },
-        {"description":"(シンクロ) 小, え → (ぇ)","type":"basic",
-            "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
-            "from":{"simultaneous":[
-                {"key_code":"q"},
-                {"key_code":"o"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"KO","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"KO","value":1}},
-                {"key_code":"x"},{"key_code":"e","repeat":false}
-            ]
-        },
-        {"description":"(シンクロ) 小, お → (ぉ)","type":"basic",
-            "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
-            "from":{"simultaneous":[
-                {"key_code":"q"},
-                {"key_code":"n"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"KO","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"KO","value":1}},
-                {"key_code":"x"},{"key_code":"o","repeat":false}
-            ]
-        },
-        {"description":"(シンクロ) こ, な → 行送り","type":"basic",
-            "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
-            "from":{"simultaneous":[
-                {"key_code":"v"},
-                {"key_code":"m"}
-                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"HL","value":0}},{"set_variable":{"name":"HR","value":0}}]}
-            },
-            "to":[{"set_variable":{"name":"HL","value":1}},{"set_variable":{"name":"HR","value":1}},
-                {"key_code":"return_or_enter","repeat":false}
-            ]
-        },
-
-
         {"description":"[Sp] (シンクロ) 小, わ → (ゎ)","type":"basic",
             "conditions":[{"type":"variable_if","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
@@ -3682,6 +3735,32 @@
                 {"key_code":"x"},{"key_code":"u","repeat":false}
             ]
         },
+        {"description":"(シンクロ) 小, え → (ぇ)","type":"basic",
+            "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
+            "from":{"simultaneous":[
+                {"key_code":"q"},
+                {"key_code":"o"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"KO","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"KO","value":1}},
+                {"key_code":"x"},{"key_code":"e","repeat":false}
+            ]
+        },
+        {"description":"(シンクロ) 小, お → (ぉ)","type":"basic",
+            "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
+            "from":{"simultaneous":[
+                {"key_code":"q"},
+                {"key_code":"n"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"KO","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"KO","value":1}},
+                {"key_code":"x"},{"key_code":"o","repeat":false}
+            ]
+        },
         {"description":"(シンクロ) く, あ → IME ON","type":"basic",
             "conditions":[{"type":"variable_unless","name":"shifted","value":1}],
             "parameters":{"basic.simultaneous_threshold_milliseconds":50},
@@ -3702,7 +3781,19 @@
             "to":[{"key_code":"lang2","repeat":false}
             ]
         },
-
+        {"description":"(シンクロ) こ, な → 行送り","type":"basic",
+            "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
+            "from":{"simultaneous":[
+                {"key_code":"v"},
+                {"key_code":"m"}
+                ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"HL","value":0}},{"set_variable":{"name":"HR","value":0}}]}
+            },
+            "to":[{"set_variable":{"name":"HL","value":1}},{"set_variable":{"name":"HR","value":1}},
+                {"key_code":"return_or_enter","repeat":false}
+            ]
+        },
 
         {"description":"スペースキー","type":"basic",
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
@@ -3713,13 +3804,12 @@
             "to_after_key_up":[{"set_variable":{"name":"shifted","value":0}}]
         },
 
-
         {"description":"[あ, い] 小 → 新","type":"basic",
             "conditions":[{"type":"variable_if","name":"EM1L","value":1},
                 {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.to_delayed_action_delay_milliseconds":20},
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"key_code":"q"},
             "to":[{"key_code":"lang2"},{"key_code":"left_arrow","modifiers":["command"]},{"key_code":"down_arrow","modifiers":["command"]},{"key_code":"lang1"}
             ]
@@ -3732,6 +3822,103 @@
             "from":{"key_code":"a"},
             "to":[{"key_code":"semicolon","modifiers":["option"]},{"key_code":"semicolon","modifiers":["option"]},{"key_code":"return_or_enter","repeat":false}
             ]
+        },
+        {"description":"(UNICODE使用)[あ, い] ほ → ──","type":"basic",
+            "conditions":[{"type":"variable_if","name":"EM1L","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"key_code":"z"},
+            "to":[{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"2","modifiers":["option"]},{"key_code":"5","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"2","modifiers":["option"]},{"key_code":"2","modifiers":["option"]},{"key_code":"5","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"2","modifiers":["option"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
+            ]}
+        },
+        {"description":"(日本語IM時)(JIS/US)[あ, い] き → 『』","type":"basic",
+            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
+                {"type":"variable_if","name":"EM1L","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "from":{"key_code":"w"},
+            "to":[{"key_code":"close_bracket","modifiers":["shift"]},{"key_code":"non_us_pound","modifiers":["shift"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
+            ]
+        },
+        {"type":"basic",
+            "conditions":[{"type":"variable_if","name":"EM1L","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "from":{"key_code":"w"},
+            "to":[{"key_code":"open_bracket","modifiers":["shift"]},{"key_code":"close_bracket","modifiers":["shift"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
+            ]
+        },
+        {"description":"(UNICODE使用)[あ, い] き → 『』","type":"basic",
+            "conditions":[{"type":"variable_if","name":"EM1L","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"key_code":"w"},
+            "to":[{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"e","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"f","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
+            ]}
+        },
+        {"description":"(JIS/US)[あ, い] け → （）","type":"basic",
+            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
+                {"type":"variable_if","name":"EM1L","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "from":{"key_code":"s"},
+            "to":[{"key_code":"8","modifiers":["shift"]},{"key_code":"9","modifiers":["shift"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
+            ]
+        },
+        {"type":"basic",
+            "conditions":[{"type":"variable_if","name":"EM1L","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "from":{"key_code":"s"},
+            "to":[{"key_code":"9","modifiers":["shift"]},{"key_code":"0","modifiers":["shift"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
+            ]
+        },
+        {"description":"(日本語IM時)(JIS/US)[あ, い] ひ → 【】","type":"basic",
+            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
+                {"type":"variable_if","name":"EM1L","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "from":{"key_code":"x"},
+            "to":[{"key_code":"8","modifiers":["option"]},{"key_code":"9","modifiers":["option"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
+            ]
+        },
+        {"type":"basic",
+            "conditions":[{"type":"variable_if","name":"EM1L","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "from":{"key_code":"x"},
+            "to":[{"key_code":"9","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
+            ]
+        },
+        {"description":"(UNICODE使用)[あ, い] ひ → 【】","type":"basic",
+            "conditions":[{"type":"variable_if","name":"EM1L","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"key_code":"x"},
+            "to":[{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
+            ]}
         },
         {"description":"[あ, い] と → ？","type":"basic",
             "conditions":[{"type":"variable_if","name":"EM1L","value":1},
@@ -3760,14 +3947,36 @@
             "to":[{"key_code":"s","modifiers":["command"],"repeat":false}
             ]
         },
-        {"description":"[あ, い] こ → 確定↓","type":"basic",
+        {"description":"(JIS/US)[あ, い] か → 「」","type":"basic",
+            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
+                {"type":"variable_if","name":"EM1L","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "from":{"key_code":"f"},
+            "to":[{"key_code":"close_bracket"},{"key_code":"non_us_pound"},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
+            ]
+        },
+        {"type":"basic",
             "conditions":[{"type":"variable_if","name":"EM1L","value":1},
                 {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "from":{"key_code":"v"},
-            "to":[{"key_code":"return_or_enter"},{"key_code":"f","modifiers":["control"]}
+            "from":{"key_code":"f"},
+            "to":[{"key_code":"open_bracket"},{"key_code":"close_bracket"},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
             ]
+        },
+        {"description":"(U.S.使用)[あ, い] こ → 確定↓","type":"basic",
+            "conditions":[{"type":"variable_if","name":"EM1L","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"key_code":"v"},
+            "to":[{"select_input_source":{"input_source_id":"com.apple.keylayout.US"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"f","modifiers":["control"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
+            ]}
         },
         {"description":"[あ, い] 左 → ・未確定","type":"basic",
             "conditions":[{"type":"variable_if","name":"EM1L","value":1},
@@ -3778,6 +3987,43 @@
             "to":[{"key_code":"slash","repeat":false}
             ]
         },
+        {"description":"(U.S.使用)(JIS/US)[あ, い] (っ) → ↲「」","type":"basic",
+            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
+                {"type":"variable_if","name":"EM1L","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"key_code":"g"},
+            "to":[{"select_input_source":{"input_source_id":"com.apple.keylayout.US"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"lang1"},{"key_code":"e","modifiers":["control"]},{"key_code":"return_or_enter"},{"key_code":"close_bracket"},{"key_code":"non_us_pound"},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"]}
+            ]}
+        },
+        {"type":"basic",
+            "conditions":[{"type":"variable_if","name":"EM1L","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"key_code":"g"},
+            "to":[{"select_input_source":{"input_source_id":"com.apple.keylayout.US"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"lang1"},{"key_code":"e","modifiers":["control"]},{"key_code":"return_or_enter"},{"key_code":"open_bracket"},{"key_code":"close_bracket"},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"]}
+            ]}
+        },
+        {"description":"(U.S.使用)[あ, い] そ → ↲□","type":"basic",
+            "conditions":[{"type":"variable_if","name":"EM1L","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"key_code":"b"},
+            "to":[{"select_input_source":{"input_source_id":"com.apple.keylayout.US"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"lang1"},{"key_code":"e","modifiers":["control"]},{"key_code":"return_or_enter"},{"key_code":"spacebar"}
+            ]}
+        },
         {"description":"[と, か] 右 → Home","type":"basic",
             "conditions":[{"type":"variable_if","name":"EM1R","value":1},
                 {"type":"variable_unless","name":"shifted","value":1},
@@ -3786,6 +4032,18 @@
             "from":{"key_code":"y"},
             "to":[{"key_code":"a","modifiers":["control"],"repeat":false}
             ]
+        },
+        {"description":"(U.S.使用)[と, か] く → 確定End","type":"basic",
+            "conditions":[{"type":"variable_if","name":"EM1R","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"key_code":"h"},
+            "to":[{"select_input_source":{"input_source_id":"com.apple.keylayout.US"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"e","modifiers":["control"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
+            ]}
         },
         {"description":"[と, か] た → End","type":"basic",
             "conditions":[{"type":"variable_if","name":"EM1R","value":1},
@@ -3904,6 +4162,18 @@
             "to":[{"key_code":"f","modifiers":["control"]},{"key_code":"f","modifiers":["control"]},{"key_code":"f","modifiers":["control"]},{"key_code":"f","modifiers":["control"]},{"key_code":"f","modifiers":["control"]}
             ]
         },
+        {"description":"(UNICODE使用)[な, ん] ろ → 《》","type":"basic",
+            "conditions":[{"type":"variable_if","name":"EM2L","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"key_code":"a"},
+            "to":[{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"a","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"b","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
+            ]}
+        },
         {"description":"[な, ん] て → 行頭□□□挿入","type":"basic",
             "conditions":[{"type":"variable_if","name":"EM2L","value":1},
                 {"type":"variable_unless","name":"shifted","value":1},
@@ -3949,6 +4219,18 @@
             "to":[{"key_code":"a","modifiers":["control"]},{"key_code":"delete_or_backspace"},{"key_code":"delete_forward"},{"key_code":"e","modifiers":["control"],"repeat":false}
             ]
         },
+        {"description":"(UNICODE使用)[な, ん] 左 → ○","type":"basic",
+            "conditions":[{"type":"variable_if","name":"EM2L","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"key_code":"t"},
+            "to":[{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"2","modifiers":["option"]},{"key_code":"5","modifiers":["option"]},{"key_code":"c","modifiers":["option"]},{"key_code":"b","modifiers":["option"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
+            ]}
+        },
         {"description":"[な, ん] (っ) → ／","type":"basic",
             "conditions":[{"type":"variable_if","name":"EM2L","value":1},
                 {"type":"variable_unless","name":"shifted","value":1},
@@ -3957,6 +4239,18 @@
             "from":{"key_code":"g"},
             "to":[{"key_code":"slash","modifiers":["option"]},{"key_code":"return_or_enter","repeat":false}
             ]
+        },
+        {"description":"(UNICODE使用)[な, ん] そ → x   x   x","type":"basic",
+            "conditions":[{"type":"variable_if","name":"EM2L","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
+            "from":{"key_code":"b"},
+            "to":[{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+            "to_delayed_action":{"to_if_invoked":[
+                {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"d","modifiers":["option"]},{"key_code":"7","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"d","modifiers":["option"]},{"key_code":"7","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"d","modifiers":["option"]},{"key_code":"7","modifiers":["option"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"},{"key_code":"return_or_enter"}
+            ]}
         },
         {"description":"[は, こ] 右 → +Home","type":"basic",
             "conditions":[{"type":"variable_if","name":"EM2R","value":1},
@@ -4094,200 +4388,6 @@
             ]
         },
 
-
-        {"description":"[あ, い] け → （）","type":"basic",
-            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
-                {"type":"variable_if","name":"EM1L","value":1},
-                {"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "from":{"key_code":"s"},
-            "to":[{"key_code":"8","modifiers":["shift"]},{"key_code":"9","modifiers":["shift"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
-            ]
-        },
-        {"type":"basic",
-            "conditions":[{"type":"variable_if","name":"EM1L","value":1},
-                {"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "from":{"key_code":"s"},
-            "to":[{"key_code":"9","modifiers":["shift"]},{"key_code":"0","modifiers":["shift"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
-            ]
-        },
-        {"description":"[あ, い] か → 「」","type":"basic",
-            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
-                {"type":"variable_if","name":"EM1L","value":1},
-                {"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "from":{"key_code":"f"},
-            "to":[{"key_code":"close_bracket"},{"key_code":"non_us_pound"},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
-            ]
-        },
-        {"type":"basic",
-            "conditions":[{"type":"variable_if","name":"EM1L","value":1},
-                {"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "from":{"key_code":"f"},
-            "to":[{"key_code":"open_bracket"},{"key_code":"close_bracket"},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
-            ]
-        },
-        {"description":"[あ, い] (っ) → ↲「」","type":"basic",
-            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
-                {"type":"variable_if","name":"EM1L","value":1},
-                {"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "from":{"key_code":"g"},
-            "to":[{"key_code":"return_or_enter"},{"key_code":"e","modifiers":["control"]},{"key_code":"return_or_enter"},{"key_code":"close_bracket"},{"key_code":"non_us_pound"},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
-            ]
-        },
-        {"type":"basic",
-            "conditions":[{"type":"variable_if","name":"EM1L","value":1},
-                {"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "from":{"key_code":"g"},
-            "to":[{"key_code":"return_or_enter"},{"key_code":"e","modifiers":["control"]},{"key_code":"return_or_enter"},{"key_code":"open_bracket"},{"key_code":"close_bracket"},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
-            ]
-        },
-        {"description":"[あ, い] そ → ↲□","type":"basic",
-            "conditions":[{"type":"variable_if","name":"EM1L","value":1},
-                {"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "from":{"key_code":"b"},
-            "to":[{"key_code":"return_or_enter"},{"key_code":"e","modifiers":["control"]},{"key_code":"return_or_enter"},{"key_code":"spacebar","repeat":false}
-            ]
-        },
-        {"description":"[と, か] く → 確定End","type":"basic",
-            "conditions":[{"type":"variable_if","name":"EM1R","value":1},
-                {"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "from":{"key_code":"h"},
-            "to":[{"key_code":"return_or_enter"},{"key_code":"e","modifiers":["control"],"repeat":false}
-            ]
-        },
-
-
-        {"description":"(日本語IM)[あ, い] き → 『』","type":"basic",
-            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
-                {"type":"variable_if","name":"EM1L","value":1},
-                {"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "from":{"key_code":"w"},
-            "to":[{"key_code":"close_bracket","modifiers":["shift"]},{"key_code":"non_us_pound","modifiers":["shift"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
-            ]
-        },
-        {"type":"basic",
-            "conditions":[{"type":"variable_if","name":"EM1L","value":1},
-                {"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "from":{"key_code":"w"},
-            "to":[{"key_code":"open_bracket","modifiers":["shift"]},{"key_code":"close_bracket","modifiers":["shift"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
-            ]
-        },
-        {"description":"(日本語IM)[あ, い] ひ → 【】","type":"basic",
-            "conditions":[{"type":"keyboard_type_if","keyboard_types":["jis"]},
-                {"type":"variable_if","name":"EM1L","value":1},
-                {"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "from":{"key_code":"x"},
-            "to":[{"key_code":"8","modifiers":["option"]},{"key_code":"9","modifiers":["option"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
-            ]
-        },
-        {"type":"basic",
-            "conditions":[{"type":"variable_if","name":"EM1L","value":1},
-                {"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "from":{"key_code":"x"},
-            "to":[{"key_code":"9","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"return_or_enter"},{"key_code":"b","modifiers":["control"],"repeat":false}
-            ]
-        },
-
-
-        {"description":"[あ, い] ほ → ──","type":"basic",
-            "conditions":[{"type":"variable_if","name":"EM1L","value":1},
-                {"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.to_delayed_action_delay_milliseconds":20},
-            "from":{"key_code":"z"},
-            "to":[{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
-            "to_delayed_action":{"to_if_invoked":[
-                {"key_code":"2","modifiers":["option"]},{"key_code":"5","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"2","modifiers":["option"]},{"key_code":"2","modifiers":["option"]},{"key_code":"5","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"2","modifiers":["option"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
-            ]}
-        },
-        {"description":"[あ, い] き → 『』","type":"basic",
-            "conditions":[{"type":"variable_if","name":"EM1L","value":1},
-                {"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.to_delayed_action_delay_milliseconds":20},
-            "from":{"key_code":"w"},
-            "to":[{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
-            "to_delayed_action":{"to_if_invoked":[
-                {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"e","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"f","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
-            ]}
-        },
-        {"description":"[あ, い] ひ → 【】","type":"basic",
-            "conditions":[{"type":"variable_if","name":"EM1L","value":1},
-                {"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.to_delayed_action_delay_milliseconds":20},
-            "from":{"key_code":"x"},
-            "to":[{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
-            "to_delayed_action":{"to_if_invoked":[
-                {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
-            ]}
-        },
-        {"description":"[な, ん] ろ → 《》","type":"basic",
-            "conditions":[{"type":"variable_if","name":"EM2L","value":1},
-                {"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.to_delayed_action_delay_milliseconds":20},
-            "from":{"key_code":"a"},
-            "to":[{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
-            "to_delayed_action":{"to_if_invoked":[
-                {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"a","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"b","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
-            ]}
-        },
-        {"description":"[な, ん] 左 → ○","type":"basic",
-            "conditions":[{"type":"variable_if","name":"EM2L","value":1},
-                {"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.to_delayed_action_delay_milliseconds":20},
-            "from":{"key_code":"t"},
-            "to":[{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
-            "to_delayed_action":{"to_if_invoked":[
-                {"key_code":"2","modifiers":["option"]},{"key_code":"5","modifiers":["option"]},{"key_code":"c","modifiers":["option"]},{"key_code":"b","modifiers":["option"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
-            ]}
-        },
-        {"description":"[な, ん] そ → x   x   x","type":"basic",
-            "conditions":[{"type":"variable_if","name":"EM2L","value":1},
-                {"type":"variable_unless","name":"shifted","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.to_delayed_action_delay_milliseconds":20},
-            "from":{"key_code":"b"},
-            "to":[{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
-            "to_delayed_action":{"to_if_invoked":[
-                {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"d","modifiers":["option"]},{"key_code":"7","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"d","modifiers":["option"]},{"key_code":"7","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"d","modifiers":["option"]},{"key_code":"7","modifiers":["option"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"},{"key_code":"return_or_enter"}
-            ]}
-        },
         {"description":"[左濁] さ → ざ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
@@ -4544,24 +4644,6 @@
             "to":[{"key_code":"x"},{"key_code":"i","repeat":false}
             ]
         },
-        {"description":"[小] え → (ぇ)","type":"basic",
-            "conditions":[{"type":"variable_if","name":"KO","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "from":{"key_code":"o"},
-            "to":[{"key_code":"x"},{"key_code":"e","repeat":false}
-            ]
-        },
-        {"description":"[小] お → (ぉ)","type":"basic",
-            "conditions":[{"type":"variable_if","name":"KO","value":1},
-                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
-                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "from":{"key_code":"n"},
-            "to":[{"key_code":"x"},{"key_code":"o","repeat":false}
-            ]
-        },
-
-
         {"description":"[Sp, 小] う → (ゎ)","type":"basic",
             "conditions":[{"type":"variable_if","name":"KO","value":1},
                 {"type":"variable_if","name":"shifted","value":1},
@@ -4579,8 +4661,22 @@
             "to":[{"key_code":"x"},{"key_code":"u","repeat":false}
             ]
         },
-
-
+        {"description":"[小] え → (ぇ)","type":"basic",
+            "conditions":[{"type":"variable_if","name":"KO","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "from":{"key_code":"o"},
+            "to":[{"key_code":"x"},{"key_code":"e","repeat":false}
+            ]
+        },
+        {"description":"[小] お → (ぉ)","type":"basic",
+            "conditions":[{"type":"variable_if","name":"KO","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "from":{"key_code":"n"},
+            "to":[{"key_code":"x"},{"key_code":"o","repeat":false}
+            ]
+        },
         {"description":"[こ] な → 行送り","type":"basic",
             "conditions":[{"type":"variable_if","name":"HR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
@@ -4597,7 +4693,6 @@
             "to":[{"key_code":"return_or_enter","repeat":false}
             ]
         },
-
 
         {"description":"[Sp] む","type":"basic",
             "conditions":[{"type":"variable_if","name":"shifted","value":1},
@@ -4811,7 +4906,6 @@
             "to":[{"key_code":"h"},{"key_code":"u","repeat":false}
             ]
         },
-
 
         {"description":"小","type":"basic",
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
