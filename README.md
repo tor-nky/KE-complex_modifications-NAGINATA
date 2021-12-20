@@ -36,7 +36,7 @@ iMac (Retina 5K, 27-inch, Late 2015)
 
 * 変換確定前の文字がある時に編集モードの記号をともなう入力をすると、記号が前の方に入ることがある。
 
-## 参考
+# 参考
 
 * [【薙刀式】v14集大成版](http://oookaworks.seesaa.net/article/484704326.html#gsc.tab=0)
 * [Karabiner-Elementsの設定項目をまとめました](https://qiita.com/s-show/items/a1fd228b04801477729c)

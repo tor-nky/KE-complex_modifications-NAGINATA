@@ -27,8 +27,6 @@
             },
             "to":[{"set_variable":{"name":"shifted","value":1}},{"set_variable":{"name":"KO","value":1}}]
         },
-
-
         {"description":"(シンクロ) Sp, む","type":"basic",
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
@@ -205,9 +203,9 @@
                     {"key_code":"spacebar"},
                     {"key_code":"f"}
                 ],"simultaneous_options":{"key_down_order":"strict_inverse",
-                "to_after_key_up":[{"set_variable":{"name":"shifted","value":0}}]}
+                "to_after_key_up":[{"set_variable":{"name":"shifted","value":0}},{"set_variable":{"name":"DR","value":0}}]}
             },
-            "to":[{"set_variable":{"name":"shifted","value":1}},
+            "to":[{"set_variable":{"name":"shifted","value":1}},{"set_variable":{"name":"DR","value":1}},
                 {"key_code":"m"},{"key_code":"a","repeat":false}
             ]
         },
@@ -247,9 +245,9 @@
                     {"key_code":"spacebar"},
                     {"key_code":"j"}
                 ],"simultaneous_options":{"key_down_order":"strict_inverse",
-                "to_after_key_up":[{"set_variable":{"name":"shifted","value":0}}]}
+                "to_after_key_up":[{"set_variable":{"name":"shifted","value":0}},{"set_variable":{"name":"DL","value":0}}]}
             },
-            "to":[{"set_variable":{"name":"shifted","value":1}},
+            "to":[{"set_variable":{"name":"shifted","value":1}},{"set_variable":{"name":"DL","value":1}},
                 {"key_code":"n"},{"key_code":"o","repeat":false}
             ]
         },
