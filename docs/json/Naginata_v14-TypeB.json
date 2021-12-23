@@ -3,7 +3,7 @@
         {"description":"(シンクロ) Sp, 小, わ → (ゎ)","type":"basic",
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
+            "parameters":{"basic.simultaneous_threshold_milliseconds":60},
             "from":{"simultaneous":[
                     {"key_code":"spacebar"},
                     {"key_code":"q"},
@@ -441,8 +441,7 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":30},
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"k"},
@@ -460,7 +459,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"k"},
@@ -475,8 +473,7 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":30},
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"k"},
@@ -495,8 +492,7 @@
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":30},
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"k"},
@@ -512,8 +508,7 @@
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":30},
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"k"},
@@ -528,8 +523,7 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":30},
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"k"},
@@ -547,7 +541,6 @@
                 {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"k"},
@@ -562,7 +555,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"k"},
@@ -579,8 +571,7 @@
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":30},
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"k"},
@@ -596,8 +587,7 @@
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":30},
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"k"},
@@ -612,8 +602,7 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":30},
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"k"},
@@ -629,7 +618,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"k"},
@@ -644,7 +632,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"k"},
@@ -659,7 +646,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"k"},
@@ -675,7 +661,6 @@
                 {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"k"},
@@ -690,7 +675,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"k"},
@@ -705,8 +689,7 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":30},
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"k"},
@@ -722,7 +705,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"k"},
@@ -738,8 +720,7 @@
                 {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":30},
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"k"},
@@ -755,8 +736,7 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":30},
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"k"},
@@ -772,8 +752,7 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":30},
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"k"},
@@ -789,7 +768,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"d"},
                     {"key_code":"f"},
@@ -804,8 +782,7 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":30},
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"simultaneous":[
                     {"key_code":"d"},
                     {"key_code":"f"},
@@ -821,7 +798,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"d"},
                     {"key_code":"f"},
@@ -836,7 +812,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"d"},
                     {"key_code":"f"},
@@ -851,7 +826,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"d"},
                     {"key_code":"f"},
@@ -866,7 +840,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"d"},
                     {"key_code":"f"},
@@ -881,7 +854,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"d"},
                     {"key_code":"f"},
@@ -896,7 +868,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"d"},
                     {"key_code":"f"},
@@ -911,7 +882,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"d"},
                     {"key_code":"f"},
@@ -926,7 +896,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"d"},
                     {"key_code":"f"},
@@ -941,7 +910,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"d"},
                     {"key_code":"f"},
@@ -956,7 +924,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"d"},
                     {"key_code":"f"},
@@ -971,7 +938,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"d"},
                     {"key_code":"f"},
@@ -986,7 +952,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"d"},
                     {"key_code":"f"},
@@ -1001,7 +966,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"d"},
                     {"key_code":"f"},
@@ -1016,7 +980,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"comma"},
@@ -1031,8 +994,7 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":30},
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"comma"},
@@ -1049,8 +1011,7 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":30},
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"comma"},
@@ -1069,7 +1030,6 @@
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"comma"},
@@ -1085,7 +1045,6 @@
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"comma"},
@@ -1100,8 +1059,7 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":30},
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"comma"},
@@ -1119,7 +1077,6 @@
                 {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"comma"},
@@ -1134,7 +1091,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"comma"},
@@ -1151,7 +1107,6 @@
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"comma"},
@@ -1167,7 +1122,6 @@
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_source_id":"Kotoeri"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"comma"},
@@ -1182,8 +1136,7 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":30},
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"comma"},
@@ -1200,7 +1153,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"comma"},
@@ -1215,7 +1167,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"comma"},
@@ -1230,7 +1181,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"comma"},
@@ -1245,7 +1195,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"comma"},
@@ -1261,7 +1210,6 @@
                 {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-                "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"comma"},
@@ -1276,7 +1224,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-                "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"comma"},
@@ -1291,7 +1238,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"comma"},
@@ -1306,8 +1252,7 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":30},
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"comma"},
@@ -1324,7 +1269,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"comma"},
@@ -1339,8 +1283,7 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80,
-                "basic.to_delayed_action_delay_milliseconds":30},
+            "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"comma"},
@@ -1357,7 +1300,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"c"},
                     {"key_code":"v"},
@@ -1372,7 +1314,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"c"},
                     {"key_code":"v"},
@@ -1387,7 +1328,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"c"},
                     {"key_code":"v"},
@@ -1402,7 +1342,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"c"},
                     {"key_code":"v"},
@@ -1417,7 +1356,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"c"},
                     {"key_code":"v"},
@@ -1432,7 +1370,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"c"},
                     {"key_code":"v"},
@@ -1447,7 +1384,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"c"},
                     {"key_code":"v"},
@@ -1462,7 +1398,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"c"},
                     {"key_code":"v"},
@@ -1477,7 +1412,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"c"},
                     {"key_code":"v"},
@@ -1492,7 +1426,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"c"},
                     {"key_code":"v"},
@@ -1507,7 +1440,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"c"},
                     {"key_code":"v"},
@@ -1522,7 +1454,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"c"},
                     {"key_code":"v"},
@@ -1537,7 +1468,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"c"},
                     {"key_code":"v"},
@@ -1552,7 +1482,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"c"},
                     {"key_code":"v"},
@@ -1567,7 +1496,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"c"},
                     {"key_code":"v"},
@@ -1583,7 +1511,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"r"},
@@ -1598,7 +1525,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                 {"key_code":"j"},
                 {"key_code":"r"},
@@ -1613,7 +1539,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"r"},
@@ -1628,7 +1553,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"w"},
@@ -1643,7 +1567,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"w"},
@@ -1658,7 +1581,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"w"},
@@ -1673,7 +1595,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"g"},
@@ -1688,7 +1609,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"g"},
@@ -1703,7 +1623,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"g"},
@@ -1718,7 +1637,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"x"},
@@ -1733,7 +1651,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"x"},
@@ -1748,7 +1665,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"x"},
@@ -1763,7 +1679,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"x"},
@@ -1778,7 +1693,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"x"},
@@ -1793,7 +1707,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"x"},
@@ -1808,7 +1721,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"e"},
@@ -1823,7 +1735,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"e"},
@@ -1838,7 +1749,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"e"},
@@ -1853,7 +1763,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"e"},
@@ -1868,7 +1777,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"d"},
@@ -1883,7 +1791,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"d"},
@@ -1898,7 +1805,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"r"},
@@ -1913,7 +1819,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"m"},
                     {"key_code":"g"},
@@ -1928,7 +1833,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"r"},
@@ -1943,7 +1847,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"j"},
                     {"key_code":"g"},
@@ -1958,7 +1861,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"v"},
                     {"key_code":"period"},
@@ -1973,7 +1875,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"v"},
                     {"key_code":"period"},
@@ -1988,7 +1889,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"v"},
                     {"key_code":"period"},
@@ -2003,7 +1903,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"v"},
                     {"key_code":"period"},
@@ -2018,7 +1917,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"v"},
                     {"key_code":"period"},
@@ -2033,7 +1931,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"f"},
                     {"key_code":"l"},
@@ -2048,7 +1945,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"f"},
                     {"key_code":"l"},
@@ -2063,7 +1959,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"f"},
                     {"key_code":"l"},
@@ -2078,7 +1973,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"f"},
                     {"key_code":"l"},
@@ -2093,7 +1987,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"f"},
                     {"key_code":"l"},
@@ -2108,7 +2001,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"v"},
                     {"key_code":"l"},
@@ -2123,7 +2015,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"v"},
                     {"key_code":"l"},
@@ -2138,7 +2029,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"v"},
                     {"key_code":"l"},
@@ -2153,7 +2043,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"v"},
                     {"key_code":"k"},
@@ -2168,7 +2057,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"v"},
                     {"key_code":"h"},
@@ -2183,7 +2071,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"v"},
                     {"key_code":"h"},
@@ -2198,7 +2085,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"v"},
                     {"key_code":"h"},
@@ -2213,7 +2099,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"v"},
                     {"key_code":"h"},
@@ -2228,7 +2113,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"v"},
                     {"key_code":"h"},
@@ -2243,7 +2127,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"f"},
                     {"key_code":"h"},
@@ -2258,7 +2141,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"f"},
                     {"key_code":"h"},
@@ -2273,7 +2155,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"f"},
                     {"key_code":"h"},
@@ -2288,7 +2169,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"f"},
                     {"key_code":"h"},
@@ -2303,7 +2183,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"f"},
                     {"key_code":"h"},
@@ -2318,7 +2197,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"v"},
                     {"key_code":"semicolon"},
@@ -2333,7 +2211,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"v"},
                     {"key_code":"semicolon"},
@@ -2348,7 +2225,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"v"},
                     {"key_code":"semicolon"},
@@ -2363,7 +2239,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":80},
             "from":{"simultaneous":[
                     {"key_code":"v"},
                     {"key_code":"semicolon"},
@@ -2379,7 +2254,6 @@
             "conditions":[{"type":"variable_if","name":"DL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"r"},
                 {"key_code":"h"}
@@ -2391,7 +2265,6 @@
             "conditions":[{"type":"variable_if","name":"DL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"r"},
                 {"key_code":"p"}
@@ -2403,7 +2276,6 @@
             "conditions":[{"type":"variable_if","name":"DL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"r"},
                 {"key_code":"i"}
@@ -2415,7 +2287,6 @@
             "conditions":[{"type":"variable_if","name":"DL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"w"},
                 {"key_code":"h"}
@@ -2427,7 +2298,6 @@
             "conditions":[{"type":"variable_if","name":"DL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"w"},
                 {"key_code":"p"}
@@ -2439,7 +2309,6 @@
             "conditions":[{"type":"variable_if","name":"DL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"w"},
                 {"key_code":"i"}
@@ -2451,7 +2320,6 @@
             "conditions":[{"type":"variable_if","name":"DL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"g"},
                 {"key_code":"h"}
@@ -2463,7 +2331,6 @@
             "conditions":[{"type":"variable_if","name":"DL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"g"},
                 {"key_code":"p"}
@@ -2475,7 +2342,6 @@
             "conditions":[{"type":"variable_if","name":"DL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"g"},
                 {"key_code":"i"}
@@ -2487,7 +2353,6 @@
             "conditions":[{"type":"variable_if","name":"DL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"x"},
                 {"key_code":"h"}
@@ -2499,7 +2364,6 @@
             "conditions":[{"type":"variable_if","name":"DL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"x"},
                 {"key_code":"p"}
@@ -2511,7 +2375,6 @@
             "conditions":[{"type":"variable_if","name":"DL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"x"},
                 {"key_code":"i"}
@@ -2523,7 +2386,6 @@
             "conditions":[{"type":"variable_if","name":"HL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"x"},
                 {"key_code":"h"}
@@ -2535,7 +2397,6 @@
             "conditions":[{"type":"variable_if","name":"HL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"x"},
                 {"key_code":"p"}
@@ -2547,7 +2408,6 @@
             "conditions":[{"type":"variable_if","name":"HL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"x"},
                 {"key_code":"i"}
@@ -2559,7 +2419,6 @@
             "conditions":[{"type":"variable_if","name":"HL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"e"},
                 {"key_code":"k"}
@@ -2571,7 +2430,6 @@
             "conditions":[{"type":"variable_if","name":"HL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"e"},
                 {"key_code":"p"}
@@ -2583,7 +2441,6 @@
             "conditions":[{"type":"variable_if","name":"DL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"e"},
                 {"key_code":"k"}
@@ -2595,7 +2452,6 @@
             "conditions":[{"type":"variable_if","name":"DL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"e"},
                 {"key_code":"p"}
@@ -2607,7 +2463,6 @@
             "conditions":[{"type":"variable_if","name":"HL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"d"},
                 {"key_code":"l"}
@@ -2619,7 +2474,6 @@
             "conditions":[{"type":"variable_if","name":"DL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"d"},
                 {"key_code":"l"}
@@ -2631,7 +2485,6 @@
             "conditions":[{"type":"variable_if","name":"HL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"r"},
                 {"key_code":"o"}
@@ -2643,7 +2496,6 @@
             "conditions":[{"type":"variable_if","name":"HL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"g"},
                 {"key_code":"o"}
@@ -2655,7 +2507,6 @@
             "conditions":[{"type":"variable_if","name":"DL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"r"},
                 {"key_code":"o"}
@@ -2667,7 +2518,6 @@
             "conditions":[{"type":"variable_if","name":"DL","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"g"},
                 {"key_code":"o"}
@@ -2679,7 +2529,6 @@
             "conditions":[{"type":"variable_if","name":"HR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"period"},
                 {"key_code":"j"}
@@ -2693,7 +2542,6 @@
             "conditions":[{"type":"variable_if","name":"HR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"period"},
                 {"key_code":"k"}
@@ -2707,7 +2555,6 @@
             "conditions":[{"type":"variable_if","name":"HR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"period"},
                 {"key_code":"o"}
@@ -2719,7 +2566,6 @@
             "conditions":[{"type":"variable_if","name":"HR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"period"},
                 {"key_code":"n"}
@@ -2731,7 +2577,6 @@
             "conditions":[{"type":"variable_if","name":"HR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"period"},
                 {"key_code":"p"}
@@ -2743,7 +2588,6 @@
             "conditions":[{"type":"variable_if","name":"DR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"l"},
                 {"key_code":"j"}
@@ -2757,7 +2601,6 @@
             "conditions":[{"type":"variable_if","name":"DR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"l"},
                 {"key_code":"k"}
@@ -2769,7 +2612,6 @@
             "conditions":[{"type":"variable_if","name":"DR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"l"},
                 {"key_code":"o"}
@@ -2781,7 +2623,6 @@
             "conditions":[{"type":"variable_if","name":"DR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"l"},
                 {"key_code":"n"}
@@ -2793,7 +2634,6 @@
             "conditions":[{"type":"variable_if","name":"DR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"l"},
                 {"key_code":"p"}
@@ -2805,7 +2645,6 @@
             "conditions":[{"type":"variable_if","name":"HR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"l"},
                 {"key_code":"k"}
@@ -2817,7 +2656,6 @@
             "conditions":[{"type":"variable_if","name":"HR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"l"},
                 {"key_code":"o"}
@@ -2829,7 +2667,6 @@
             "conditions":[{"type":"variable_if","name":"HR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"l"},
                 {"key_code":"n"}
@@ -2841,7 +2678,6 @@
             "conditions":[{"type":"variable_if","name":"HR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"k"},
                 {"key_code":"o"}
@@ -2853,7 +2689,6 @@
             "conditions":[{"type":"variable_if","name":"HR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"h"},
                 {"key_code":"j"}
@@ -2867,7 +2702,6 @@
             "conditions":[{"type":"variable_if","name":"HR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"h"},
                 {"key_code":"k"}
@@ -2879,7 +2713,6 @@
             "conditions":[{"type":"variable_if","name":"HR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"h"},
                 {"key_code":"o"}
@@ -2891,7 +2724,6 @@
             "conditions":[{"type":"variable_if","name":"HR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"h"},
                 {"key_code":"n"}
@@ -2903,7 +2735,6 @@
             "conditions":[{"type":"variable_if","name":"HR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"h"},
                 {"key_code":"l"}
@@ -2915,7 +2746,6 @@
             "conditions":[{"type":"variable_if","name":"DR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"h"},
                 {"key_code":"j"}
@@ -2929,7 +2759,6 @@
             "conditions":[{"type":"variable_if","name":"DR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"h"},
                 {"key_code":"k"}
@@ -2941,7 +2770,6 @@
             "conditions":[{"type":"variable_if","name":"DR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"h"},
                 {"key_code":"o"}
@@ -2953,7 +2781,6 @@
             "conditions":[{"type":"variable_if","name":"DR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"h"},
                 {"key_code":"n"}
@@ -2965,7 +2792,6 @@
             "conditions":[{"type":"variable_if","name":"DR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"h"},
                 {"key_code":"l"}
@@ -2977,7 +2803,6 @@
             "conditions":[{"type":"variable_if","name":"HR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"semicolon"},
                 {"key_code":"j"}
@@ -2991,7 +2816,6 @@
             "conditions":[{"type":"variable_if","name":"HR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"semicolon"},
                 {"key_code":"k"}
@@ -3003,7 +2827,6 @@
             "conditions":[{"type":"variable_if","name":"HR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"semicolon"},
                 {"key_code":"o"}
@@ -3015,7 +2838,6 @@
             "conditions":[{"type":"variable_if","name":"HR","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"semicolon"},
                 {"key_code":"n"}
@@ -3028,7 +2850,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"f"},
                 {"key_code":"u"}
@@ -3042,7 +2863,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"f"},
                 {"key_code":"o"}
@@ -3056,7 +2876,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"f"},
                 {"key_code":"h"}
@@ -3070,7 +2889,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"f"},
                 {"key_code":"semicolon"}
@@ -3084,7 +2902,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"f"},
                 {"key_code":"n"}
@@ -3098,7 +2915,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"f"},
                 {"key_code":"period"}
@@ -3112,7 +2928,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"f"},
                 {"key_code":"l"}
@@ -3126,7 +2941,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"f"},
                 {"key_code":"p"}
@@ -3140,7 +2954,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"j"},
                 {"key_code":"s"}
@@ -3154,7 +2967,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"j"},
                 {"key_code":"e"}
@@ -3168,7 +2980,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"j"},
                 {"key_code":"r"}
@@ -3182,7 +2993,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"j"},
                 {"key_code":"a"}
@@ -3196,7 +3006,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"j"},
                 {"key_code":"w"}
@@ -3210,7 +3019,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"j"},
                 {"key_code":"d"}
@@ -3224,7 +3032,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"j"},
                 {"key_code":"f"}
@@ -3238,7 +3045,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"j"},
                 {"key_code":"g"}
@@ -3252,7 +3058,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"j"},
                 {"key_code":"z"}
@@ -3266,7 +3071,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"j"},
                 {"key_code":"x"}
@@ -3280,7 +3084,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"j"},
                 {"key_code":"c"}
@@ -3294,7 +3097,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"j"},
                 {"key_code":"v"}
@@ -3308,7 +3110,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"j"},
                 {"key_code":"b"}
@@ -3322,7 +3123,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"v"},
                 {"key_code":"period"}
@@ -3336,7 +3136,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"v"},
                 {"key_code":"p"}
@@ -3350,7 +3149,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"m"},
                 {"key_code":"z"}
@@ -3364,7 +3162,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"m"},
                 {"key_code":"x"}
@@ -3378,7 +3175,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"m"},
                 {"key_code":"c"}
@@ -3392,7 +3188,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"b"},
                 {"key_code":"h"}
@@ -3404,7 +3199,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"b"},
                 {"key_code":"p"}
@@ -3416,7 +3210,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"b"},
                 {"key_code":"i"}
@@ -3428,7 +3221,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"e"},
                 {"key_code":"h"}
@@ -3440,7 +3232,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"e"},
                 {"key_code":"p"}
@@ -3452,7 +3243,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"e"},
                 {"key_code":"i"}
@@ -3464,7 +3254,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"r"},
                 {"key_code":"h"}
@@ -3476,7 +3265,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"r"},
                 {"key_code":"p"}
@@ -3488,7 +3276,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"r"},
                 {"key_code":"i"}
@@ -3500,7 +3287,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"w"},
                 {"key_code":"h"}
@@ -3512,7 +3298,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"w"},
                 {"key_code":"p"}
@@ -3524,7 +3309,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"w"},
                 {"key_code":"i"}
@@ -3536,7 +3320,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"d"},
                 {"key_code":"h"}
@@ -3548,7 +3331,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"d"},
                 {"key_code":"p"}
@@ -3560,7 +3342,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"d"},
                 {"key_code":"i"}
@@ -3572,7 +3353,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"g"},
                 {"key_code":"h"}
@@ -3584,7 +3364,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"g"},
                 {"key_code":"p"}
@@ -3596,7 +3375,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"g"},
                 {"key_code":"i"}
@@ -3608,7 +3386,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"x"},
                 {"key_code":"h"}
@@ -3620,7 +3397,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"x"},
                 {"key_code":"p"}
@@ -3632,7 +3408,6 @@
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"x"},
                 {"key_code":"i"}
@@ -3644,7 +3419,6 @@
         {"description":"(シンクロ) 小, や → (ゃ)","type":"basic",
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"q"},
                 {"key_code":"h"}
@@ -3657,7 +3431,6 @@
         {"description":"(シンクロ) 小, ゆ → (ゅ)","type":"basic",
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"q"},
                 {"key_code":"p"}
@@ -3670,7 +3443,6 @@
         {"description":"(シンクロ) 小, よ → (ょ)","type":"basic",
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"q"},
                 {"key_code":"i"}
@@ -3683,7 +3455,6 @@
         {"description":"(シンクロ) 小, あ → (ぁ)","type":"basic",
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"q"},
                 {"key_code":"j"}
@@ -3696,7 +3467,6 @@
         {"description":"(シンクロ) 小, い → (ぃ)","type":"basic",
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"q"},
                 {"key_code":"k"}
@@ -3710,7 +3480,6 @@
             "conditions":[{"type":"variable_if","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                     {"key_code":"q"},
                     {"key_code":"l"}
@@ -3723,7 +3492,6 @@
         {"description":"(シンクロ) 小, う → (ぅ)","type":"basic",
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"q"},
                 {"key_code":"l"}
@@ -3736,7 +3504,6 @@
         {"description":"(シンクロ) 小, え → (ぇ)","type":"basic",
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"q"},
                 {"key_code":"o"}
@@ -3749,7 +3516,6 @@
         {"description":"(シンクロ) 小, お → (ぉ)","type":"basic",
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"q"},
                 {"key_code":"n"}
@@ -3761,7 +3527,6 @@
         },
         {"description":"(シンクロ) く, あ → IME ON","type":"basic",
             "conditions":[{"type":"variable_unless","name":"shifted","value":1}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"h"},
                 {"key_code":"j"}
@@ -3771,7 +3536,6 @@
         },
         {"description":"(シンクロ) か, (っ) → IME OFF","type":"basic",
             "conditions":[{"type":"variable_unless","name":"shifted","value":1}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"f"},
                 {"key_code":"g"}
@@ -3782,7 +3546,6 @@
         {"description":"(シンクロ) こ, な → 行送り","type":"basic",
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
-            "parameters":{"basic.simultaneous_threshold_milliseconds":50},
             "from":{"simultaneous":[
                 {"key_code":"v"},
                 {"key_code":"m"}
