@@ -2252,6 +2252,7 @@
 
         {"description":"[右濁] (シンクロ) し, や → じゃ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2263,6 +2264,7 @@
         },
         {"description":"[右濁] (シンクロ) し, ゆ → じゅ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2274,6 +2276,7 @@
         },
         {"description":"[右濁] (シンクロ) し, よ → じょ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2285,6 +2288,7 @@
         },
         {"description":"[右濁] (シンクロ) き, や → ぎゃ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2296,6 +2300,7 @@
         },
         {"description":"[右濁] (シンクロ) き, ゆ → ぎゅ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2307,6 +2312,7 @@
         },
         {"description":"[右濁] (シンクロ) き, よ → ぎょ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2318,6 +2324,7 @@
         },
         {"description":"[右濁] (シンクロ) ち, や → ぢゃ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2329,6 +2336,7 @@
         },
         {"description":"[右濁] (シンクロ) ち, ゆ → ぢゅ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2340,6 +2348,7 @@
         },
         {"description":"[右濁] (シンクロ) ち, よ → ぢょ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2351,6 +2360,7 @@
         },
         {"description":"[右濁] (シンクロ) ひ, や → びゃ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2362,6 +2372,7 @@
         },
         {"description":"[右濁] (シンクロ) ひ, ゆ → びゅ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2373,6 +2384,7 @@
         },
         {"description":"[右濁] (シンクロ) ひ, よ → びょ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2384,6 +2396,7 @@
         },
         {"description":"[右半] (シンクロ) ひ, や → ぴゃ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2395,6 +2408,7 @@
         },
         {"description":"[右半] (シンクロ) ひ, ゆ → ぴゅ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2406,6 +2420,7 @@
         },
         {"description":"[右半] (シンクロ) ひ, よ → ぴょ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2417,6 +2432,7 @@
         },
         {"description":"[右半] (シンクロ) て, い → てぃ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2428,6 +2444,7 @@
         },
         {"description":"[右半] (シンクロ) て, ゆ → てゅ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2439,6 +2456,7 @@
         },
         {"description":"[右濁] (シンクロ) て, い → でぃ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2450,6 +2468,7 @@
         },
         {"description":"[右濁] (シンクロ) て, ゆ → でゅ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2461,6 +2480,7 @@
         },
         {"description":"[右半] (シンクロ) と, う → とぅ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2472,6 +2492,7 @@
         },
         {"description":"[右濁] (シンクロ) と, う → どぅ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2483,6 +2504,7 @@
         },
         {"description":"[右半] (シンクロ) し, え → しぇ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2494,6 +2516,7 @@
         },
         {"description":"[右半] (シンクロ) ち, え → ちぇ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2505,6 +2528,7 @@
         },
         {"description":"[右濁] (シンクロ) し, え → じぇ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2516,6 +2540,7 @@
         },
         {"description":"[右濁] (シンクロ) ち, え → ぢぇ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2527,6 +2552,7 @@
         },
         {"description":"[左半] (シンクロ) ふ, あ → ふぁ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2540,6 +2566,7 @@
         },
         {"description":"[左半] (シンクロ) ふ, い → ふぃ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2553,6 +2580,7 @@
         },
         {"description":"[左半] (シンクロ) ふ, え → ふぇ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2564,6 +2592,7 @@
         },
         {"description":"[左半] (シンクロ) ふ, お → ふぉ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2575,6 +2604,7 @@
         },
         {"description":"[左半] (シンクロ) ふ, ゆ → ふゅ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2586,6 +2616,7 @@
         },
         {"description":"[左濁] (シンクロ) う, あ → ヴぁ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2599,6 +2630,7 @@
         },
         {"description":"[左濁] (シンクロ) う, い → ヴぃ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2610,6 +2642,7 @@
         },
         {"description":"[左濁] (シンクロ) う, え → ヴぇ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2621,6 +2654,7 @@
         },
         {"description":"[左濁] (シンクロ) う, お → ヴぉ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2632,6 +2666,7 @@
         },
         {"description":"[左濁] (シンクロ) う, ゆ → ヴゅ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2643,6 +2678,7 @@
         },
         {"description":"[左半] (シンクロ) う, い → うぃ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2654,6 +2690,7 @@
         },
         {"description":"[左半] (シンクロ) う, え → うぇ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2665,6 +2702,7 @@
         },
         {"description":"[左半] (シンクロ) う, お → うぉ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2676,6 +2714,7 @@
         },
         {"description":"[左半] (シンクロ) い, え → いぇ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2687,6 +2726,7 @@
         },
         {"description":"[左半] (シンクロ) く, あ → くぁ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2700,6 +2740,7 @@
         },
         {"description":"[左半] (シンクロ) く, い → くぃ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2711,6 +2752,7 @@
         },
         {"description":"[左半] (シンクロ) く, え → くぇ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2722,6 +2764,7 @@
         },
         {"description":"[左半] (シンクロ) く, お → くぉ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2733,6 +2776,7 @@
         },
         {"description":"[左半] (シンクロ) く, わ → くゎ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2744,6 +2788,7 @@
         },
         {"description":"[左濁] (シンクロ) く, あ → ぐぁ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2757,6 +2802,7 @@
         },
         {"description":"[左濁] (シンクロ) く, い → ぐぃ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2768,6 +2814,7 @@
         },
         {"description":"[左濁] (シンクロ) く, え → ぐぇ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2779,6 +2826,7 @@
         },
         {"description":"[左濁] (シンクロ) く, お → ぐぉ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2790,6 +2838,7 @@
         },
         {"description":"[左濁] (シンクロ) く, わ → ぐゎ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2801,6 +2850,7 @@
         },
         {"description":"[左半] (シンクロ) ー, あ → つぁ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2814,6 +2864,7 @@
         },
         {"description":"[左半] (シンクロ) ー, い → つぃ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2825,6 +2876,7 @@
         },
         {"description":"[左半] (シンクロ) ー, え → つぇ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -2836,6 +2888,7 @@
         },
         {"description":"[左半] (シンクロ) ー, お → つぉ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"simultaneous":[
@@ -4151,6 +4204,7 @@
 
         {"description":"[左濁] さ → ざ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"u"},
@@ -4159,6 +4213,7 @@
         },
         {"description":"[左濁] す → ず","type":"basic",
             "conditions":[{"type":"variable_if","name":"DR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"o"},
@@ -4167,6 +4222,7 @@
         },
         {"description":"[左濁] く → ぐ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"h"},
@@ -4175,6 +4231,7 @@
         },
         {"description":"[左濁] つ → づ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"semicolon"},
@@ -4183,6 +4240,7 @@
         },
         {"description":"[左濁] た → だ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"n"},
@@ -4191,6 +4249,7 @@
         },
         {"description":"[左濁] ふ → ぶ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"period"},
@@ -4199,6 +4258,7 @@
         },
         {"description":"[左濁] う → ヴ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"l"},
@@ -4207,6 +4267,7 @@
         },
         {"description":"[左濁] へ → べ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"p"},
@@ -4215,6 +4276,7 @@
         },
         {"description":"[左濁] あ → が","type":"basic",
             "conditions":[{"type":"variable_if","name":"DR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"j"},
@@ -4223,6 +4285,7 @@
         },
         {"description":"[右濁] け → げ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"s"},
@@ -4231,6 +4294,7 @@
         },
         {"description":"[右濁] て → で","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"e"},
@@ -4239,6 +4303,7 @@
         },
         {"description":"[右濁] し → じ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"r"},
@@ -4247,6 +4312,7 @@
         },
         {"description":"[右濁] せ → ぜ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"a"},
@@ -4255,6 +4321,7 @@
         },
         {"description":"[右濁] き → ぎ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"w"},
@@ -4263,6 +4330,7 @@
         },
         {"description":"[右濁] と → ど","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"d"},
@@ -4271,6 +4339,7 @@
         },
         {"description":"[右濁] か → が","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"f"},
@@ -4279,6 +4348,7 @@
         },
         {"description":"[右濁] ち → ぢ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"g"},
@@ -4287,6 +4357,7 @@
         },
         {"description":"[右濁] ほ → ぼ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"z"},
@@ -4295,6 +4366,7 @@
         },
         {"description":"[右濁] ひ → び","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"x"},
@@ -4303,6 +4375,7 @@
         },
         {"description":"[右濁] は → ば","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"c"},
@@ -4311,6 +4384,7 @@
         },
         {"description":"[右濁] こ → ご","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"v"},
@@ -4319,6 +4393,7 @@
         },
         {"description":"[右濁] そ → ぞ","type":"basic",
             "conditions":[{"type":"variable_if","name":"DL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"b"},
@@ -4327,6 +4402,7 @@
         },
         {"description":"[左半] ふ → ぷ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"period"},
@@ -4335,6 +4411,7 @@
         },
         {"description":"[左半] へ → ぺ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HR","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"p"},
@@ -4343,6 +4420,7 @@
         },
         {"description":"[右半] ほ → ぽ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"z"},
@@ -4351,6 +4429,7 @@
         },
         {"description":"[右半] ひ → ぴ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"x"},
@@ -4359,6 +4438,7 @@
         },
         {"description":"[右半] は → ぱ","type":"basic",
             "conditions":[{"type":"variable_if","name":"HL","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"c"},
