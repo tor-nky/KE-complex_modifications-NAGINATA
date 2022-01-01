@@ -4959,5 +4959,35 @@
             "to":[{"key_code":"r"},{"key_code":"e","repeat":false}
             ]
         }
+    ]},
+
+
+    {"description":"薙刀式《左右シフトかな拡張》","manipulators":[
+        {"description":"左シフトキー","type":"basic",
+            "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "from":{"key_code":"left_shift"},
+            "to":[{"set_variable":{"name":"shifted","value":1}}],
+            "to_after_key_up":[{"set_variable":{"name":"shifted","value":0}}]
+        },
+        {"description":"右シフトキー","type":"basic",
+            "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "from":{"key_code":"right_shift"},
+            "to":[{"set_variable":{"name":"shifted","value":1}}],
+            "to_after_key_up":[{"set_variable":{"name":"shifted","value":0}}]
+        }
+    ]},
+
+
+    {"description":"薙刀式《エンター同時押しシフト拡張》","manipulators":[
+        {"description":"エンターキー","type":"basic",
+            "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "from":{"key_code":"return_or_enter"},
+            "to":[{"set_variable":{"name":"shifted","value":1}}],
+            "to_if_alone":[{"key_code":"return_or_enter"}],
+            "to_after_key_up":[{"set_variable":{"name":"shifted","value":0}}]
+        }
     ]}
 ]}
