@@ -1,5 +1,5 @@
-{"title":"Japanese NAGINATA STYLE (v14) ※A群、B群、C群の順に登録してください。同じ群の順序は自由です。","rules":[
-    {"description":"A1: 薙刀式v14《同時連続シフト拡張》","manipulators":[
+{"title":"Japanese NAGINATA STYLE (2022年3月3日付) ※A群、B群、C群の順に登録してください。同じ群の順序は自由です。","rules":[
+    {"description":"A1: 薙刀式2022年3月3日付《同時連続シフト拡張》","manipulators":[
         {"description":"(シンクロ) Sp, 小, わ → (ゎ)","type":"basic",
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
@@ -27,7 +27,7 @@
             },
             "to":[{"set_variable":{"name":"shifted","value":1}},{"set_variable":{"name":"KO","value":1}}]
         },
-        {"description":"(シンクロ) Sp, む","type":"basic",
+        {"description":"(シンクロ) Sp, ぬ","type":"basic",
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "parameters":{"basic.simultaneous_threshold_milliseconds":60},
@@ -38,7 +38,7 @@
                 "to_after_key_up":[{"set_variable":{"name":"shifted","value":0}}]}
             },
             "to":[{"set_variable":{"name":"shifted","value":1}},
-                {"key_code":"m"},{"key_code":"u","repeat":false}
+                {"key_code":"n"},{"key_code":"u","repeat":false}
             ]
         },
         {"description":"(シンクロ) Sp, り","type":"basic",
@@ -55,7 +55,7 @@
                 {"key_code":"r"},{"key_code":"i","repeat":false}
             ]
         },
-        {"description":"(シンクロ) Sp, ぬ","type":"basic",
+        {"description":"(シンクロ) Sp, ね","type":"basic",
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "parameters":{"basic.simultaneous_threshold_milliseconds":60},
@@ -66,7 +66,7 @@
                 "to_after_key_up":[{"set_variable":{"name":"shifted","value":0}}]}
             },
             "to":[{"set_variable":{"name":"shifted","value":1}},
-                {"key_code":"n"},{"key_code":"u","repeat":false}
+                {"key_code":"n"},{"key_code":"e","repeat":false}
             ]
         },
         {"description":"(シンクロ) Sp, 左","type":"basic",
@@ -391,7 +391,7 @@
                 {"key_code":"period"},{"key_code":"return_or_enter","repeat":false}
             ]
         },
-        {"description":"(シンクロ) Sp, ね","type":"basic",
+        {"description":"(シンクロ) Sp, む","type":"basic",
             "conditions":[{"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "parameters":{"basic.simultaneous_threshold_milliseconds":60},
@@ -402,7 +402,7 @@
                 "to_after_key_up":[{"set_variable":{"name":"shifted","value":0}}]}
             },
             "to":[{"set_variable":{"name":"shifted","value":1}},
-                {"key_code":"n"},{"key_code":"e","repeat":false}
+                {"key_code":"m"},{"key_code":"u","repeat":false}
             ]
         },
         {"description":"(シンクロ) Sp, ふ","type":"basic",
@@ -682,7 +682,7 @@
     ]},
 
 
-    {"description":"B: 薙刀式配列v14（集大成版）","manipulators":[
+    {"description":"B: 薙刀式配列2022年3月3日付","manipulators":[
         {"description":"(U.S.使用)(シンクロ) あ, い, 小 → 新","type":"basic",
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
@@ -1190,7 +1190,7 @@
                 {"key_code":"escape"},{"key_code":"escape"},{"key_code":"escape","repeat":false}
             ]
         },
-        {"description":"(シンクロ) と, か, ー → 5↑","type":"basic",
+        {"description":"(シンクロ) と, か, ー → カタカナ","type":"basic",
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
@@ -1201,10 +1201,10 @@
                 ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1R","value":0}}]}
             },
             "to":[{"set_variable":{"name":"EM1R","value":1}},
-                {"key_code":"b","modifiers":["control"]},{"key_code":"b","modifiers":["control"]},{"key_code":"b","modifiers":["control"]},{"key_code":"b","modifiers":["control"]},{"key_code":"b","modifiers":["control"]}
+                {"key_code":"f7","repeat":false}
             ]
         },
-        {"description":"(シンクロ) と, か, れ → 5↓","type":"basic",
+        {"description":"(シンクロ) と, か, れ → ひらがな","type":"basic",
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
@@ -1215,7 +1215,7 @@
                 ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1R","value":0}}]}
             },
             "to":[{"set_variable":{"name":"EM1R","value":1}},
-                {"key_code":"f","modifiers":["control"]},{"key_code":"f","modifiers":["control"]},{"key_code":"f","modifiers":["control"]},{"key_code":"f","modifiers":["control"]},{"key_code":"f","modifiers":["control"]}
+                {"key_code":"f6","repeat":false}
             ]
         },
         {"description":"(シンクロ) な, ん, 小 → カッコ外し","type":"basic",
@@ -1720,7 +1720,7 @@
                 {"key_code":"z","modifiers":["command"],"repeat":false}
             ]
         },
-        {"description":"(シンクロ) は, こ, ー → カタカナ","type":"basic",
+        {"description":"(シンクロ) は, こ, ー → シフト + 右","type":"basic",
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
@@ -1731,10 +1731,10 @@
                 ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2R","value":0}}]}
             },
             "to":[{"set_variable":{"name":"EM2R","value":1}},
-                {"key_code":"f7","repeat":false}
+                {"key_code":"p","modifiers":["control","shift"]}
             ]
         },
-        {"description":"(シンクロ) は, こ, れ → ひらがな","type":"basic",
+        {"description":"(シンクロ) は, こ, れ → シフト + 左","type":"basic",
             "conditions":[{"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
@@ -1745,7 +1745,7 @@
                 ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2R","value":0}}]}
             },
             "to":[{"set_variable":{"name":"EM2R","value":1}},
-                {"key_code":"f6","repeat":false}
+                {"key_code":"n","modifiers":["control","shift"]}
             ]
         },
 
@@ -4204,22 +4204,22 @@
             "to":[{"key_code":"escape"},{"key_code":"escape"},{"key_code":"escape","repeat":false}
             ]
         },
-        {"description":"[と, か] ー → 5↑","type":"basic",
+        {"description":"[と, か] ー → カタカナ","type":"basic",
             "conditions":[{"type":"variable_if","name":"EM1R","value":1},
                 {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"semicolon"},
-            "to":[{"key_code":"b","modifiers":["control"]},{"key_code":"b","modifiers":["control"]},{"key_code":"b","modifiers":["control"]},{"key_code":"b","modifiers":["control"]},{"key_code":"b","modifiers":["control"]}
+            "to":[{"key_code":"f7","repeat":false}
             ]
         },
-        {"description":"[と, か] れ → 5↓","type":"basic",
+        {"description":"[と, か] れ → ひらがな","type":"basic",
             "conditions":[{"type":"variable_if","name":"EM1R","value":1},
                 {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"slash"},
-            "to":[{"key_code":"f","modifiers":["control"]},{"key_code":"f","modifiers":["control"]},{"key_code":"f","modifiers":["control"]},{"key_code":"f","modifiers":["control"]},{"key_code":"f","modifiers":["control"]}
+            "to":[{"key_code":"f6","repeat":false}
             ]
         },
         {"description":"(UNICODE使用)[な, ん] ろ → 《》","type":"basic",
@@ -4429,22 +4429,22 @@
             "to":[{"key_code":"z","modifiers":["command"],"repeat":false}
             ]
         },
-        {"description":"[は, こ] ー → カタカナ","type":"basic",
+        {"description":"[は, こ] ー → シフト + 右","type":"basic",
             "conditions":[{"type":"variable_if","name":"EM2R","value":1},
                 {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"semicolon"},
-            "to":[{"key_code":"f7","repeat":false}
+            "to":[{"key_code":"p","modifiers":["control","shift"]}
             ]
         },
-        {"description":"[は, こ] れ → ひらがな","type":"basic",
+        {"description":"[は, こ] れ → シフト + 左","type":"basic",
             "conditions":[{"type":"variable_if","name":"EM2R","value":1},
                 {"type":"variable_unless","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"slash"},
-            "to":[{"key_code":"f6","repeat":false}
+            "to":[{"key_code":"n","modifiers":["control","shift"]}
             ]
         },
 
@@ -4781,12 +4781,12 @@
             ]
         },
 
-        {"description":"[Sp] む","type":"basic",
+        {"description":"[Sp] ぬ","type":"basic",
             "conditions":[{"type":"variable_if","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"w"},
-            "to":[{"key_code":"m"},{"key_code":"u","repeat":false}
+            "to":[{"key_code":"n"},{"key_code":"u","repeat":false}
             ]
         },
         {"description":"[Sp] り","type":"basic",
@@ -4797,12 +4797,12 @@
             "to":[{"key_code":"r"},{"key_code":"i","repeat":false}
             ]
         },
-        {"description":"[Sp] ぬ","type":"basic",
+        {"description":"[Sp] ね","type":"basic",
             "conditions":[{"type":"variable_if","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"r"},
-            "to":[{"key_code":"n"},{"key_code":"u","repeat":false}
+            "to":[{"key_code":"n"},{"key_code":"e","repeat":false}
             ]
         },
         {"description":"[Sp] 左","type":"basic",
@@ -4977,12 +4977,12 @@
             "to":[{"key_code":"period"},{"key_code":"return_or_enter","repeat":false}
             ]
         },
-        {"description":"[Sp] ね","type":"basic",
+        {"description":"[Sp] む","type":"basic",
             "conditions":[{"type":"variable_if","name":"shifted","value":1},
                 {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "from":{"key_code":"comma"},
-            "to":[{"key_code":"n"},{"key_code":"e","repeat":false}
+            "to":[{"key_code":"m"},{"key_code":"u","repeat":false}
             ]
         },
         {"description":"[Sp] ふ","type":"basic",
