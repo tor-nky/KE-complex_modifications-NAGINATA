@@ -542,6 +542,15 @@
             "to":[{"set_variable":{"name":"EM2R","value":1}}],
             "to_if_alone":[{"key_code":"k"},{"key_code":"o"},{"key_code":"h"},{"key_code":"a"}]},
 
+        {"description":"[あ, い] て → でぃ","type":"basic",
+            "conditions":[{"type":"variable_if","name":"EM1L","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "from":{"key_code":"e"},
+            "to":[{"key_code":"d"},{"key_code":"h"},{"key_code":"i","repeat":false}
+            ]
+        },
         {"description":"[な, ん] 小 → カッコ外し","type":"basic",
             "conditions":[{"type":"variable_if","name":"EM2L","value":1},
                 {"type":"variable_unless","name":"shifted","value":1},

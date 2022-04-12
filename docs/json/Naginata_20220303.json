@@ -525,7 +525,7 @@
                     {"key_code":"v"}
                 ],"simultaneous_options":{"key_down_order":"strict",
                     "to_after_key_up":[{"set_variable":{"name":"EM2R","value":0}}]}
-                },
+            },
             "to":[{"set_variable":{"name":"EM2R","value":1}}],
             "to_if_alone":[{"key_code":"h"},{"key_code":"a"},{"key_code":"k"},{"key_code":"o"}]
         },
@@ -542,6 +542,15 @@
             "to":[{"set_variable":{"name":"EM2R","value":1}}],
             "to_if_alone":[{"key_code":"k"},{"key_code":"o"},{"key_code":"h"},{"key_code":"a"}]},
 
+        {"description":"[あ, い] て → でぃ","type":"basic",
+            "conditions":[{"type":"variable_if","name":"EM1L","value":1},
+                {"type":"variable_unless","name":"shifted","value":1},
+                {"input_sources":[{"language":"ja"}],"type":"input_source_if"},
+                {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
+            "from":{"key_code":"e"},
+            "to":[{"key_code":"d"},{"key_code":"h"},{"key_code":"i","repeat":false}
+            ]
+        },
         {"description":"[な, ん] 小 → カッコ外し","type":"basic",
             "conditions":[{"type":"variable_if","name":"EM2L","value":1},
                 {"type":"variable_unless","name":"shifted","value":1},
@@ -560,7 +569,8 @@
             "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"key_code":"z"},
             "to":[{"set_variable":{"name":"EM2L","value":1}},
-                {"key_code":"x","modifiers":["command"]},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+                {"key_code":"x","modifiers":["command"]},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}
+            ],
             "to_delayed_action":{"to_if_invoked":[
                 {"key_code":"f","modifiers":["option"]},{"key_code":"f","modifiers":["option"]},{"key_code":"5","modifiers":["option"]},{"key_code":"c","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"a","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"b","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"b","modifiers":["control"]},{"key_code":"v","modifiers":["command"]},{"key_code":"f","modifiers":["control"]},{"key_code":"spacebar"},{"key_code":"b","modifiers":["shift","control"]},{"key_code":"x","modifiers":["command"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
             ]}
@@ -596,7 +606,8 @@
             "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"key_code":"w"},
             "to":[{"set_variable":{"name":"EM2L","value":1}},
-                {"key_code":"x","modifiers":["command"]},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+                {"key_code":"x","modifiers":["command"]},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}
+            ],
             "to_delayed_action":{"to_if_invoked":[
                 {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"e","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"f","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"v","modifiers":["command"]},{"key_code":"f","modifiers":["control"]},{"key_code":"spacebar"},{"key_code":"b","modifiers":["shift","control"]},{"key_code":"x","modifiers":["command"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
             ]}
@@ -653,7 +664,8 @@
             "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"key_code":"x"},
             "to":[{"set_variable":{"name":"EM2L","value":1}},
-                {"key_code":"x","modifiers":["command"]},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+                {"key_code":"x","modifiers":["command"]},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}
+            ],
             "to_delayed_action":{"to_if_invoked":[
                 {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"v","modifiers":["command"]},{"key_code":"f","modifiers":["control"]},{"key_code":"spacebar"},{"key_code":"b","modifiers":["shift","control"]},{"key_code":"x","modifiers":["command"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
             ]}
@@ -694,9 +706,7 @@
                     {"key_code":"q"}
                 ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
             },
-            "to":[{"set_variable":{"name":"EM1L","value":1}},
-                {"select_input_source":{"input_source_id":"com.apple.keylayout.US"}}
-            ],
+            "to":[{"set_variable":{"name":"EM1L","value":1}},{"select_input_source":{"input_source_id":"com.apple.keylayout.US"}}],
             "to_delayed_action":{"to_if_invoked":[
                 {"key_code":"left_arrow","modifiers":["command"]},{"key_code":"down_arrow","modifiers":["command"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
             ]}
@@ -726,8 +736,7 @@
                     {"key_code":"z"}
                 ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
             },
-            "to":[{"set_variable":{"name":"EM1L","value":1}},
-                {"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+            "to":[{"set_variable":{"name":"EM1L","value":1}},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
             "to_delayed_action":{"to_if_invoked":[
                 {"key_code":"2","modifiers":["option"]},{"key_code":"5","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"2","modifiers":["option"]},{"key_code":"2","modifiers":["option"]},{"key_code":"5","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"2","modifiers":["option"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
             ]}
@@ -774,8 +783,7 @@
                     {"key_code":"w"}
                 ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM1L","value":0}}]}
             },
-            "to":[{"set_variable":{"name":"EM1L","value":1}},
-                {"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+            "to":[{"set_variable":{"name":"EM1L","value":1}},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
             "to_delayed_action":{"to_if_invoked":[
                 {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"e","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"f","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
             ]}
@@ -1243,8 +1251,7 @@
                     {"key_code":"a"}
                 ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
             },
-            "to":[{"set_variable":{"name":"EM2L","value":1}},
-                {"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+            "to":[{"set_variable":{"name":"EM2L","value":1}},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
             "to_delayed_action":{"to_if_invoked":[
                 {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"a","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"b","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
             ]}
@@ -1261,7 +1268,8 @@
                 ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
             },
             "to":[{"set_variable":{"name":"EM2L","value":1}},
-                {"key_code":"x","modifiers":["command"]},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+                {"key_code":"x","modifiers":["command"]},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}
+            ],
             "to_delayed_action":{"to_if_invoked":[
                 {"key_code":"f","modifiers":["option"]},{"key_code":"f","modifiers":["option"]},{"key_code":"5","modifiers":["option"]},{"key_code":"c","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"a","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"b","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"b","modifiers":["control"]},{"key_code":"v","modifiers":["command"]},{"key_code":"f","modifiers":["control"]},{"key_code":"spacebar"},{"key_code":"b","modifiers":["shift","control"]},{"key_code":"x","modifiers":["command"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
             ]}
@@ -1309,7 +1317,8 @@
                 ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
             },
             "to":[{"set_variable":{"name":"EM2L","value":1}},
-                {"key_code":"x","modifiers":["command"]},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+                {"key_code":"x","modifiers":["command"]},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}
+            ],
             "to_delayed_action":{"to_if_invoked":[
                 {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"e","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"f","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"v","modifiers":["command"]},{"key_code":"f","modifiers":["control"]},{"key_code":"spacebar"},{"key_code":"b","modifiers":["shift","control"]},{"key_code":"x","modifiers":["command"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
             ]}
@@ -1386,7 +1395,8 @@
                 ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
             },
             "to":[{"set_variable":{"name":"EM2L","value":1}},
-                {"key_code":"x","modifiers":["command"]},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+                {"key_code":"x","modifiers":["command"]},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}
+            ],
             "to_delayed_action":{"to_if_invoked":[
                 {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"1","modifiers":["option"]},{"key_code":"b","modifiers":["control"]},{"key_code":"v","modifiers":["command"]},{"key_code":"f","modifiers":["control"]},{"key_code":"spacebar"},{"key_code":"b","modifiers":["shift","control"]},{"key_code":"x","modifiers":["command"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
             ]}
@@ -1501,8 +1511,7 @@
                     {"key_code":"t"}
                 ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
             },
-            "to":[{"set_variable":{"name":"EM2L","value":1}},
-                {"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+            "to":[{"set_variable":{"name":"EM2L","value":1}},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
             "to_delayed_action":{"to_if_invoked":[
                 {"key_code":"2","modifiers":["option"]},{"key_code":"5","modifiers":["option"]},{"key_code":"c","modifiers":["option"]},{"key_code":"b","modifiers":["option"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
             ]}
@@ -1532,8 +1541,7 @@
                     {"key_code":"b"}
                 ],"simultaneous_options":{"to_after_key_up":[{"set_variable":{"name":"EM2L","value":0}}]}
             },
-            "to":[{"set_variable":{"name":"EM2L","value":1}},
-                {"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
+            "to":[{"set_variable":{"name":"EM2L","value":1}},{"select_input_source":{"input_source_id":"com.apple.keylayout.UnicodeHexInput"}}],
             "to_delayed_action":{"to_if_invoked":[
                 {"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"d","modifiers":["option"]},{"key_code":"7","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"d","modifiers":["option"]},{"key_code":"7","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"3","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"0","modifiers":["option"]},{"key_code":"d","modifiers":["option"]},{"key_code":"7","modifiers":["option"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"},{"key_code":"return_or_enter"}
             ]}
@@ -3867,9 +3875,7 @@
                 {"input_sources":[{"input_mode_id":"Roman$"}],"type":"input_source_unless"}],
             "parameters":{"basic.to_delayed_action_delay_milliseconds":30},
             "from":{"key_code":"q"},
-            "to":[{"set_variable":{"name":"EM1L","value":1}},
-                {"select_input_source":{"input_source_id":"com.apple.keylayout.US"}}
-            ],
+            "to":[{"set_variable":{"name":"EM1L","value":1}},{"select_input_source":{"input_source_id":"com.apple.keylayout.US"}}],
             "to_delayed_action":{"to_if_invoked":[
                 {"key_code":"left_arrow","modifiers":["command"]},{"key_code":"down_arrow","modifiers":["command"]},{"key_code":"lang1","modifiers":["shift"]},{"key_code":"lang1"}
             ]}
