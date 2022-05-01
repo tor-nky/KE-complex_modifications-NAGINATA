@@ -6,6 +6,8 @@
 
 * docs/json/Naginata_v14-TypeB
 
+ローマ字入力を使います。
+
 Karabiner-Elements に登録してください。
 
 通常シフトのみでよければ、"B: 薙刀式配列v14（集大成版）" だけを登録します。
@@ -34,12 +36,18 @@ Karabiner-Elements に登録してください。
 * 左右シフトキーを押しながらで一時的に英字入力ができます。
 《左右シフトかな拡張》を入れない場合。なお IM の設定にもよります。
 
-## 動作確認
+## 動作確認(2022年4月初めの調べ)
 
-iMac (Retina 5K, 27-inch, Late 2015)
-* macOS Big Sur (11.6.1) + Karabiner-Elements (v14.3.0) + 日本語IM または かわせみ3 (3.0)
+* iMac (Retina 5K, 27-inch, Late 2015)
 
-ローマ字入力を使います。
+macOS Big Sur (11.6.1) + Karabiner-Elements (v14.3.0) + 日本語IM または かわせみ3 (3.0)
+
+## 動作確認(現在)
+
+* MacBook Pro (13-inch, M1, 2020)
+
+Mac OS Monterey (12.3.1) + Karabiner-Elements (v14.4.0) + 日本語IM または かわせみ3 3.0.1(24) では、
+文字確定からのカッコ脱出などの動作が完全に行えない不具合があることがわかっています。
 
 # 不具合
 
